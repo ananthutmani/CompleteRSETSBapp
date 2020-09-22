@@ -1,0 +1,24 @@
+<%- include ("../partials/PESheader") %>
+<div class="container my-5">
+    <h1 class="text-center my-2 my-md-5">Events Backdoor Login</h1>
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-5">
+            <form action="/pes/pessigninroute" method="post">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" class="form-control" id="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="text" name="password" class="form-control" id="password">
+                </div>
+                <div class="form-group">
+                    <label for="adminCode">Admin Code</label>
+                    <input type="password" name="adminCode" class="form-control" id="adminCode">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include ("../partials/PESfooter") %>

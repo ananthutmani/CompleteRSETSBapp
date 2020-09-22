@@ -1,0 +1,50 @@
+<%- include ("../partials/PESheader") %>
+<section class="container my-3 my-md-5">
+    <h1 class="my-5 text-center">Edit <%= event.name %> </h1>
+    <form action="/pes/<%= event._id %>?_method=PUT" method="POST">
+        <div class="form-group">
+            <label for="name">Event Name</label>
+            <input name="event[name]" type="text" class="form-control" id="name" value="<%= event.name %>">
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="date">Event Date</label>
+                <input name="event[date]" type="text" class="form-control" id="date" value="<%= event.date %>">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="name">Event Time (Optional)</label>
+                <input name="event[time]" type="text" value="<%= event.time %>" class="form-control" id="name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="description">Event Description</label>
+            <textarea name="event[description]" class="form-control" id="description" cols="30" rows="5"
+                placeholder="Less than 40 words with no line breaks (Enters)."><%= event.description %></textarea>
+        </div>
+        <div class="form-group">
+            <label for="image">Image URL</label>
+            <input name="event[image]" type="text" class="form-control" id="image" value="<%= event.image %>">
+        </div>
+        <div class="form-group">
+            <label for="registrationlink">Registration Link</label>
+            <input name="event[reglink]" type="text" class="form-control" id="registrationlink"
+                value="<%= event.reglink %>">
+        </div>
+        <div class="form-group">
+            <div class="form-check">
+                <input name="event[upcoming]" class="form-check-input" type="radio" id="gridCheck" value="true">
+                <label class="form-check-label" for="gridCheck">
+                    Upcoming Event
+                </label>
+            </div>
+            <div class="form-check">
+                <input name="event[upcoming]" class="form-check-input" type="radio" id="gridCheck" value="false">
+                <label class="form-check-label" for="gridCheck">
+                    Completed Event
+                </label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</section>
+<%- include ("../partials/PESfooter") %>

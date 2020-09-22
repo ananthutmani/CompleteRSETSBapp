@@ -1,0 +1,101 @@
+html,body {
+	margin:0;
+    padding:0;
+    width: 100vw;
+    background-image: url(../Images/bg1.svg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+	overflow-y: scroll;
+    overflow-x: hidden;
+}
+.delete-form{
+    display: inline;
+}
+.fulfill{
+    height: 100%;
+}
+.mainbody{
+    min-height: 80vh;
+}
+.authorbio{
+    font-family: nunito;
+    font-weight: 300;
+}
+.biohead{
+    font-weight: 400;
+}
+#ending{
+    color: white;
+}
+#ending h1{
+    color: white;
+    font-weight: 500;
+}
+#ending h3{
+    font-size: 19px;
+    font-weight: 500;
+}
+#ending p{
+    font-size: 15px;
+    font-weight: 400;
+}
+#credits p{
+    font-size: 15px;
+    color: white; 
+}
+#credits i{
+     font-size: 30px;
+}
+#credits p a{
+      color: white;
+      font-weight: 600;
+} 
+.mapxx{
+        height: 100%;
+        width: 100%;
+        transition: box-shadow .3s;
+}
+.mapxx iframe{
+        height: 100%;
+        width: 100%;
+}
+.owl-carousel .owl-stage{display: flex;}
+.article-items {
+    display: flex;
+    flex: 1 0 auto;
+    height: 100%;
+}
+.circle-image{
+    border-radius: 100%;
+    overflow: hidden;
+    height: 150px;
+    width: 150px;
+}
+@media screen and (max-width: 1000px) {
+    .mapxx iframe{
+        height: 300px;
+    }
+    #credits p{
+        font-size: 12px;
+    }
+    #credits i{
+        font-size: 23px;
+     }
+
+}
+@media screen and (max-width: 800px) {
+
+    .mapxx iframe{
+        margin-left: 20px;
+        height: 250px;
+    }    
+    #credits p{
+        font-size: 10px;
+    }    
+    #credits i{
+        font-size: 20px;
+    }
+    
+}

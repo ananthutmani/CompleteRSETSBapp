@@ -1,0 +1,82 @@
+<%- include ("../partials/header") %>
+<div class="row">
+    <div class="col-md-3 order-2 order-md-1">
+        <div class="row justify-content-center mt-4">
+            <div class="col-12 mb-3">
+                <h4 class="text-center">About the Author</h4>
+                <hr>
+            </div>
+            <div class="col-12 authorbio">
+                <div class="row justify-content-center my-4">
+                    <img src="<%= blog.authorImage %>" class="circle-image img-fluid" alt="<%= blog.authorName %>">
+                </div>
+                <p class="">
+                    <span class="biohead">Name: </span><%= blog.authorName %>
+                </p>
+                <p class="">
+                    <span class="biohead">College: </span><%= blog.authorCollege %>
+                </p>
+                <p class="">
+                    <span class="biohead">Bio: </span><%- blog.authorBio %>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9 order-1 order-md-2">
+        <div class="card mb-3">
+            <img src="<%= blog.image %>" class="card-img-top" alt="<%= blog.name %>">
+            <div class="card-body">
+                <h4 class="card-title"><%= blog.name %></h4>
+                <p>
+                    <em>
+                        Submitted By
+                        <%= blog.authorName %>
+                    </em>
+                </p>
+                <hr>
+                <p class="card-text">
+                    <%- blog.description%>
+                </p>
+                <% if((currentUser && currentUser.isBlogAdmin)){ %>
+                <a href="/pes/pf/blogs/<%= blog._id %>/edit" class="btn btn-warning">Edit</a>
+
+                <form class="delete-form" action="/pes/pf/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+                    <button class="btn btn-danger">Delete</button>
+                </form>
+                <% } %>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="text-right">
+                    <a href="/pes/pf/blogs/<%= blog._id %>/comments/new" class="btn btn-success"> Add New
+                        Comment</a>
+                </div>
+                <div class="row">
+                    <% blog.comments.forEach(function(comment){ %>
+                    <div class="col-md-12">
+                        <hr>
+                        <strong> <%= comment.author.username %>
+                        </strong>
+                        <div><%= comment.text %>
+                            <% if((currentUser && comment.author.id.equals(currentUser._id))||(currentUser && currentUser.isBlogAdmin)){ %>
+                            <div class="float-right">
+                                <a href="/pes/pf/blogs/<%= blog._id %>/comments/<%= comment._id %>/edit"
+                                    class="btn btn-sm btn-warning">Edit</a>
+                                <form class="delete-form"
+                                    action="/pes/pf/blogs/<%= blog._id %>/comments/<%= comment._id %>?_method=DELETE"
+                                    method="POST">
+                                    <input type="submit" class="btn btn-sm btn-danger" value="Delete">
+                                </form>
+                            </div>
+                            <% } %>
+                        </div>
+                    </div>
+                    <% }) %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include ("../partials/footer") %>

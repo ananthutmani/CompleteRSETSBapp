@@ -1,0 +1,710 @@
+<%- include ("../partials/PESheader") %>
+<section id="preloader" class="bulb">
+    <div class="container1">
+        <svg version="1.1" id="hei-loader" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" viewBox="-16 5.5 115.3 141.5" style="enable-background:new -16 5.5 115.3 141.5;"
+            xml:space="preserve">
+
+            <g id="bulb_1_">
+                <path id="bulb-body-fill" class="st0" d="M79.7,67.8c0-18.4-16.9-33.2-37.7-33.2S4.3,49.4,4.3,67.8c0,7.3,2.7,14,7.1,19.4
+          c0.5,0.7,15.5,21.9,16.7,30.8c1.3,9.1,1.3,11.5,1.3,11.5h25.2c0,0,0-2.4,1.3-11.5c1.3-8.9,16.2-30,16.7-30.8
+          C77.1,81.8,79.7,75.1,79.7,67.8" />
+                <path id="bulb-body" class="st1" d="M79.4,67.8c0-18.4-16.9-33.2-37.7-33.2S4,49.4,4,67.8c0,7.3,2.7,14,7.1,19.4
+          c0.5,0.7,15.5,21.9,16.7,30.8c1.3,9.1,1.3,11.5,1.3,11.5h25.2c0,0,0-2.4,1.3-11.5c1.3-8.9,16.2-30,16.7-30.8
+          C76.8,81.8,79.4,75.1,79.4,67.8" />
+                <g>
+                    <line id="one" class="st2" x1="-15.3" y1="36.8" x2="-4.8" y2="47.4" />
+                    <line id="two" class="st2" x1="-3.4" y1="16.6" x2="8.1" y2="32.7" />
+                    <line id="three" class="st2" x1="21" y1="13.2" x2="24.5" y2="26.8" />
+                    <line id="four" class="st2" x1="41.4" y1="5.5" x2="42.3" y2="24.9" />
+                    <line id="five" class="st2" x1="61.9" y1="14.2" x2="57.8" y2="27.9" />
+                    <line id="six" class="st2" x1="88.2" y1="19.4" x2="74.5" y2="34" />
+                    <line id="seven" class="st2" x1="98.7" y1="40" x2="86.2" y2="48.8" />
+                </g>
+                <line id="middle-screw" class="st1" x1="25.9" y1="138.5" x2="58" y2="138.5" />
+                <line id="bottom-screw" class="st1" x1="25.9" y1="146" x2="58" y2="146" />
+            </g>
+        </svg>
+    </div>
+</section>
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" onclick="closeNav()" class="closebtn"></a>
+    <% if(currentUser && currentUser.isPESAdmin){ %>
+    <div class="container">
+        <a href="#">Welcome Admin</a>
+        <a href="/pes/peslogout" class="">Logout</a>
+    </div>
+    <% } %>
+    <a onclick="closeNav()" href="#"> Home</a>
+    <a onclick="closeNav()" href="#about"> About</a>
+    <a onclick="closeNav()" href="#execom"> Execom</a>
+    <a onclick="closeNav()" href="#events"> Events</a>
+    <a onclick="closeNav()" href="#membership"> Membership</a>
+    <a onclick="closeNav()" href="#contact"> Contact</a>
+
+</div>
+<span onclick="openNav()" id="opener"></span>
+
+<section id="hero">
+    <div id="page" class="d-none d-lg-block">
+        <ul class="cb-slideshow">
+            <li><span>Image 01</span></li>
+            <li><span>Image 02</span></li>
+            <li><span>Image 03</span></li>
+            <li><span>Image 04</span></li>
+            <li><span>Image 05</span></li>
+            <li><span>Image 06</span></li>
+        </ul>
+    </div>
+    <div class="wow fadeIn">
+        <div class="row text-center justify-content-center align-items-center" style="height: 100vh;" id="whitelayer">
+            <div class="col-11 col-md-8 wow animated fadeIn heading" data-wow-duration="500ms">
+                <h1>IEEE Power and Energy Society</h1>
+                <div class="newgreen"></div>
+                <div class="pt-3 pt-lg-2">
+                    <h3>Student Branch Chapter</h3>
+                    <h3>Rajagiri School of Engineering and Technology, Kochi</h3>
+                </div>
+            </div>
+            <div class="col-12 pb-2 pb-lg-0" id="logos">
+                <div class="row justify-content-center">
+                    <div class="col-4 col-sm-3 col-lg-2 row justify-content-center align-items-center mt-lg-2 ml-1">
+                        <img class="p-lg-4 img-fluid" src="images/svgs/IEEE_vectorwt.svg" alt="IEEE">
+                    </div>
+                    <div class="col-4 col-sm-3 col-lg-2 row justify-content-center align-items-center ">
+                        <img class="p-3 p-lg-4 img-fluid" src="images/logos/PESlogo.png" alt="IEEE PES">
+                    </div>
+                    <div class="col-4 col-sm-3 col-lg-2 row justify-content-center align-items-center mt-lg-2">
+                        <img class="img-fluid" src="images/logos/SBtypelogo.png" alt="IEEE SB RSET">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="mainwrapper" class="pt-5 pl-2 pl-md-3 pl-lg-5">
+    <section id="about" class="botmarg">
+        <div class="row align-items-center">
+            <div class="col-11 col-lg-6">
+                <div class="newblack pl-3 pl-lg-2">
+                    <h1 class="wow animated fadeInLeft pt-2" data-wow-delay="300ms">About Us</h1>
+                </div>
+                <p class="mt-3 wow animated fadeIn" data-wow-delay="500ms">
+                    The IEEE Power & Energy Society Student Branch Chapter of Rajagiri School of Engineering and
+                    Technology is a collaborative effort from the attendees of our college, irrespective of year
+                    and branch of study. We have gathered a cluster of talented individuals under the banner of
+                    the discipline engineering, maintaining focus on the field of Power and Energy
+                </p>
+            </div>
+            <div class="col-lg-6 text-center d-none d-lg-block wow animated fadeInRight" data-wow-delay="500ms">
+                <img src="images/svgs/about.svg" alt="" class="img-fluid" style="height: 40vh;">
+            </div>
+        </div>
+    </section>
+    <section class="botmarg" id="mission">
+        <div class="row justify-content-start justify-content-md-center align-items-center">
+            <div class="col-5 text-center d-none d-lg-block wow animated fadeInLeft" data-wow-delay="700ms">
+                <img src=" images/svgs/mission.svg" alt="" class="img-fluid" style="height: 40vh;">
+            </div>
+            <div class="col-11 col-lg-6">
+                <div class="newblack pl-3 pl-lg-2">
+                    <h1 class="wow animated fadeInLeft pt-2" data-wow-delay="700ms">
+                        Our Mission
+                    </h1>
+                </div>
+                <p class="mt-3 wow animated fadeIn" data-wow-delay="900ms">
+                    Our student
+                    branch chapter aims to aid the organization in establishing itself as the leading
+                    provider of scientific and engineering information on electric power and energy.
+                    <span class="d-none d-lg-inline">We focus
+                        our events and activities solely on this idea, ensuring that they turn out to be as
+                        informative as they
+                        are intruiging.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="counter" class="my-lg-5">
+        <div class="row justify-content-around align-items-center" style="height: 100%;">
+            <h1 class="col-12 text-center">Striving towards excellence</h1>
+            <div class="col-12 row justify-content-center py-0 my-0 mb-4 mb-lg-5 mt-2">
+                <div class="uline"></div>
+            </div>
+            <div class="wow animated fadeIn col-12 col-md-5 col-lg-3 row justify-content-center parent"
+                data-wow-delay="500ms">
+                <p><span class="countnum"><span class="timer1"></span>+</span><br>Events</p>
+            </div>
+            <div class="wow animated fadeIn col-12 col-md-5 col-lg-3 row justify-content-center parent"
+                data-wow-delay="700ms">
+                <p><span class="countnum"><span class="timer2"></span>+</span><br>Members</p>
+            </div>
+            <div class="wow animated fadeIn col-12 col-md-5 col-lg-3 row justify-content-center parent"
+                data-wow-delay="900ms">
+                <p><span class="countnum"><span class="timer3"></span>+</span><br>Meetings</p>
+            </div>
+        </div>
+    </section>
+    <section id="execom" class="botmarg">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-12">
+                <div class="row justify-content-center wow animated fadeIn
+                " data-wow-delay="300ms">
+                    <h1 class="col-12 wow animated fadeIn pt-2 text-center" data-wow-delay="300ms">Office Bearers
+                    </h1>
+                    <div class="col-12 row justify-content-center py-0 my-0 mb-4 mt-2">
+                        <div class="uline"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Office-Bearers">
+        <div class="container-fluid mb-5">
+            <div class="execommembers">
+                <div class="row justify-content-center">
+                    <div class="col-5 col-md-3 col-lg-2 py-3 wow animated zoomIn" id="pratibha">
+                        <div class="row justify-content-center">
+                            <div class="row bluecircle justify-content-center align-items-center"
+                                data-wow-delay="1000ms">
+                                <div class="row whitecircle justify-content-center align-items-center">
+                                    <div class="row orangecircle justify-content-center align-items-center">
+                                        <div class="execomimage">
+                                            <img src="images/EXECOM/pratibhapk.jpeg" class="img-fluid"
+                                                alt="Ms. Prathibha PK">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="execomtext">
+                            <div class="row justify-content-center text-center pt-3">
+                                <h3>Ms. Prathibha PK</h3>
+                            </div>
+                            <div class="row justify-content-center text-center">
+                                <h4>Chapter Advisor</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5 col-md-3 col-lg-2 py-3 wow animated zoomIn">
+                        <div class="row justify-content-center">
+                            <div class="row bluecircle justify-content-center align-items-center"
+                                data-wow-delay="1000ms">
+                                <div class="row whitecircle justify-content-center align-items-center">
+                                    <div class="row orangecircle justify-content-center align-items-center">
+                                        <div class="execomimage">
+                                            <img src="images/EXECOM/george.jpg" class="img-fluid" alt="George Thomas">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="execomtext">
+                            <div class="row justify-content-center text-center pt-3">
+                                <h3>George Thomas</h3>
+                            </div>
+                            <div class="row justify-content-center text-center">
+                                <h4>Chairperson</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5 col-md-3 col-lg-2 py-3 wow animated zoomIn">
+                        <div class="row justify-content-center">
+                            <div class="row bluecircle justify-content-center align-items-center"
+                                data-wow-delay="1000ms">
+                                <div class="row whitecircle justify-content-center align-items-center">
+                                    <div class="row orangecircle justify-content-center align-items-center">
+                                        <div class="execomimage">
+                                            <img src="images/EXECOM/eldho.jpg" class="img-fluid" alt="Eldho Babu">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="execomtext">
+                            <div class="row justify-content-center text-center pt-3">
+                                <h3>Eldho Babu</h3>
+                            </div>
+                            <div class="row justify-content-center text-center">
+                                <h4>Vice-Chairperson</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5 col-md-3 col-lg-2 py-3 wow animated zoomIn">
+                        <div class="row justify-content-center">
+                            <div class="row bluecircle justify-content-center align-items-center"
+                                data-wow-delay="1000ms">
+                                <div class="row whitecircle justify-content-center align-items-center">
+                                    <div class="row orangecircle justify-content-center align-items-center">
+                                        <div class="execomimage">
+                                            <img src="images/EXECOM/Ananthu.jpg" class="img-fluid" alt="Ananthu T Mani">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="execomtext">
+                            <div class="row justify-content-center text-center pt-3">
+                                <h3>Ananthu T Mani</h3>
+                            </div>
+                            <div class="row justify-content-center text-center">
+                                <h4>Secretary</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5 col-md-3 col-lg-2 py-3 wow animated zoomIn">
+                        <div class="row justify-content-center">
+                            <div class="row bluecircle justify-content-center align-items-center"
+                                data-wow-delay="1000ms">
+                                <div class="row whitecircle justify-content-center align-items-center">
+                                    <div class="row orangecircle justify-content-center align-items-center">
+                                        <div class="execomimage">
+                                            <img src="images/EXECOM/Sonal.jpeg" class="img-fluid" alt="Sonal Saju">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="execomtext">
+                            <div class="row justify-content-center text-center pt-3">
+                                <h3>Sonal Saju</h3>
+                            </div>
+                            <div class="row justify-content-center text-center">
+                                <h4>WiP Representative</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="events" class="botmarg">
+        <div class="row align-items-center">
+            <div class="col-11 col-lg-6">
+                <div class="newblack pl-3 pl-lg-2">
+                    <h1 class="wow animated fadeInLeft pt-2" data-wow-delay="300ms">Events</h1>
+                </div>
+                <p class="mt-3 wow animated fadeIn" data-wow-delay="500ms">
+                    Being one of the most active student branch chapters in Kerala, our PES SBC conducts
+                    a good number of quality events as frequently as possible. We have conducted several events that
+                    range from college level to international since January 2020, which was the month in which our
+                    SBC was created.
+                </p>
+            </div>
+            <div class="col-lg-6 text-center d-none d-lg-block wow animated fadeInRight" data-wow-delay="700ms">
+                <img src="images/svgs/events.svg" alt="" class="img-fluid" style="height: 35vh;">
+            </div>
+        </div>
+        <div class="slideshow-container mt-lg-5 pt-lg-5">
+            <div class="mySlides fade">
+                <div class="imagebox">
+                    <img src="images/Image-Slider/1.jpeg" class="image" style="width:100%">
+                    <div class="middle">
+                        <div class="text">
+                            <h3 id="hovertitle">TechRev 2020</h3>
+                            <p id="hovertext">
+                                TechRev was an interactive session on the basics of electronics, diving into the
+                                core concepts surrounding the subject. The event also included an
+                                industrial visit to ATWIC R&D, a startup owned by our speaker for the day Mr. Rahul
+                                Sivan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <div class="imagebox">
+                    <img src="images/Image-Slider/2.jpeg" class="image" style="width:100%">
+                    <div class="middle">
+                        <div class="text">
+                            <h3 id="hovertitle">Interactive Session on EV - 1</h3>
+                            <p id="hovertext">
+                                Given here is an image of classes being conducted on the general working and
+                                maintenance of electric vehicles. The class was handled by Mr. Sarath Babu of
+                                Popular Hyundai, introducing to the students the advancements in EV's through the
+                                vehicle Hyundai Kona.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <div class="imagebox">
+                    <img src="images/Image-Slider/3.jpeg" class="image" style="width:100%">
+                    <div class="middle">
+                        <div class="text">
+                            <h3 id="hovertitle">Interactive Session on EV - 2</h3>
+                            <p id="hovertext">
+                                After the seminar on Electric Vehicles, participants were given a hannds on
+                                experience of how EV's operate. They were shown how an EV is practically silent and
+                                given an under the hood view of the car, providing explanations regarding the
+                                components used in the manufacture of this EV.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <div class="imagebox">
+                    <img src="images/Image-Slider/4.jpeg" class="image" style="width:100%">
+                    <div class="middle">
+                        <div class="text">
+                            <h3 id="hovertitle">Interactive Session on EV - 3</h3>
+                            <p id="hovertext">
+                                For this event, we had arranged the arrival of the
+                                latest EV release of that time, the Hyundai Kona, to our college. Given here is
+                                a picture that was taken after the event, consisting of the participants and
+                                coordinators of the event along with Mrs. Pratibha PK, the faculty advisor of the
+                                IEEE PES SBC RSET.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="prev text-white" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next text-white" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div class="container my-5">
+            <div class="row justify-content-around align-items-center" style="height: 100%;">
+                <h1 class="text-center">Upcoming Events</h1>
+                <div class="col-12 row justify-content-center py-0 my-0 mb-4 mb-lg-5 mt-2">
+                    <div class="uline"></div>
+                </div>
+            </div>
+            <div class="row justify-content-around">
+                <!-- <div class="col-10 col-md-5 col-lg-4"> -->
+                <% event.forEach(function(event){ %>
+                <% if(event.upcoming) {%>
+                <div class="col-12 mb-4 ">
+                    <div class="cardarray">
+                        <div class="row justify-content-around align-items-center">
+                            <div class="col-8 col-md-5 col-lg-4 row justify-content-center m-3">
+                                <img src="<%= event.image %> " alt="Please Refresh Page" class="img-fluid">
+                            </div>
+                            <div class="col-12 col-md-6 my-3">
+                                <h2 class="text-center mb-1"><%= event.name %> </h2>
+                                <h4 class="text-center mb-3"><%= event.date %></h4>
+                                <% if(event.time){ %>
+                                <h5 class="text-center mb-3"><%= event.time %></h5>
+                                <% } %>
+                                <p class="mx-3 mx-md-0">
+                                    <%= event.description %>
+                                </p>
+                                <% if(event.reglink){ %>
+                                <div class="row justify-content-center">
+                                    <a class="btn btn-success mx-3" href="<%= event.reglink %>">Register Now!</a>
+                                </div>
+                                <% } %>
+                                <% if(currentUser && currentUser.isPESAdmin){ %>
+                                <div class="row justify-content-center mt-3">
+                                    <a class="btn btn-warning mx-3" href="pes/<%= event._id %>/edit ">Edit</a>
+                                    <form class="delete-form" action="/pes/<%= event._id %>?_method=DELETE"
+                                        method="POST">
+                                        <button class="btn btn-danger mx-3">Delete</button>
+                                    </form>
+                                </div>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+                <% }); %>
+            </div>
+        </div>
+        <div class="container mb-5">
+            <div class="row justify-content-around align-items-center" style="height: 100%;">
+                <h1 class="text-center">Recent Events</h1>
+                <div class="col-12 row justify-content-center py-0 my-0 mb-4 mb-lg-5 mt-2">
+                    <div class="uline"></div>
+                </div>
+            </div>
+            <div class="row justify-content-around">
+                <!-- <div class="col-10 col-md-5 col-lg-4"> -->
+                <% event.forEach(function(event){ %>
+                <% if(!(event.upcoming)) {%>
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="cardarray">
+                        <div class="row justify-content-around align-items-center">
+                            <div class="col-11 row justify-content-center m-3">
+                                <img src="<%= event.image %> " alt="Please Refresh Page" class="img-fluid">
+                            </div>
+                            <div class="col-11 m-3">
+                                <h2 class="text-center mb-1"><%= event.name %></h2>
+                                <h4 class="text-center mb-3"><%= event.date %></h4>
+                                <p class="mx-3 mx-md-0">
+                                    <%= event.description %>
+                                </p>
+                                <% if(currentUser && currentUser.isPESAdmin){ %>
+                                <div class="row justify-content-center mt-3">
+                                    <a class="btn btn-warning mx-3" href="pes/<%= event._id %>/edit ">Edit</a>
+                                    <form action="/pes/<%= event._id %>?_method=DELETE" method="POST">
+                                        <button class="btn btn-danger mx-3">Delete</button>
+                                    </form>
+                                </div>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+                <% }); %>
+            </div>
+        </div>
+        <% if(currentUser && currentUser.isPESAdmin){ %>
+        <div class="container my-3">
+            <a href="pes/new" class="btn btn-lg btn-success" style="width: 100%;">+ Add New Event</a>
+        </div>
+        <% } %>
+    </section>
+    <section id="test" class="my-3 my-lg-5">
+        <div class="container">
+            <div class="row justify-content-around align-items-center" style="height: 100%;">
+                <h1 class="text-center">Testimonials</h1>
+                <div class="col-12 row justify-content-center py-0 my-0 mb-4 mb-lg-5 mt-2">
+                    <div class="uline"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonialsliderxx">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-12">
+                        <div id="testimonial-slider" class="owl-carousel row">
+                            <div class="testimonial">
+                                <div class="pic">
+                                    <img src="images/EXECOM/Ananthu.jpg">
+                                </div>
+                                <div class="testimonial-profile">
+                                    <h3 class="title">williamson</h3>
+                                    <span class="post">Web Developer</span>
+                                </div>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius eros
+                                    consequat auctor gravida. Fusce tristique lacus at urna sollicitudin
+                                    pulvinar. Suspendisse hendrerit ultrices mauris.
+                                </p>
+                            </div>
+                            <div class="testimonial">
+                                <div class="pic">
+                                    <img src="images/EXECOM/Ananthu.jpg">
+                                </div>
+                                <div class="testimonial-profile">
+                                    <h3 class="title">Kristina</h3>
+                                    <span class="post">Web Designer</span>
+                                </div>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius eros
+                                    consequat auctor gravida. Fusce tristique lacus at urna sollicitudin
+                                    pulvinar. Suspendisse hendrerit ultrices mauris.
+                                </p>
+                            </div>
+                            <div class="testimonial">
+                                <div class="pic">
+                                    <img src="images/EXECOM/Ananthu.jpg">
+                                </div>
+                                <div class="testimonial-profile">
+                                    <h3 class="title">Steve Thomas</h3>
+                                    <span class="post">Web Developer</span>
+                                </div>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius eros
+                                    consequat auctor gravida. Fusce tristique lacus at urna sollicitudin
+                                    pulvinar. Suspendisse hendrerit ultrices mauris.
+                                </p>
+                            </div>
+                            <div class="testimonial">
+                                <div class="pic">
+                                    <img src="images/EXECOM/Ananthu.jpg">
+                                </div>
+                                <div class="testimonial-profile">
+                                    <h3 class="title">Steve Thomas</h3>
+                                    <span class="post">Web Developer</span>
+                                </div>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius eros
+                                    consequat auctor gravida. Fusce tristique lacus at urna sollicitudin
+                                    pulvinar. Suspendisse hendrerit ultrices mauris.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="botmarg" id="membership">
+        <div class="row justify-content-start justify-content-md-center align-items-center">
+            <div class="col-5 text-center d-none d-lg-block wow animated fadeInLeft" data-wow-delay="700ms">
+                <img src=" images/svgs/members.svg" alt="" class="img-fluid" style="height: 40vh;">
+            </div>
+            <div class="col-11 col-lg-6">
+                <div class="newblack pl-3 pl-lg-2">
+                    <h1 class="wow animated fadeInLeft pt-2" data-wow-delay="700ms">
+                        Membership benefits
+                    </h1>
+                </div>
+                <p class="mt-3 wow animated fadeIn" data-wow-delay="900ms">
+                    Take a dive into a profession in the "Power and Energy Industry" through the channels of
+                    IEEE PES, the world's leading organization in terms of resources, strength and quality. Here
+                    are the benefits that we present to you in return for standing by us in our journey to a
+                    brighter future:
+                </p>
+            </div>
+        </div>
+        <div class="row justify-content-around mt-5" id="fullset">
+            <div class="col-9 col-md-5 col-lg-3 m-2 row justify-content-center cards order-2 order-lg-1">
+                <div class="imagetop text-center">
+                    <img src="images/svgs/network.svg" alt="X" class="img-fluid p-3">
+                </div>
+                <div class="cardtext">
+                    <h3>Networking</h3>
+                    <p>
+                        Discuss new career prospects and other updates in the power and energy field by connecting
+                        with
+                        senior members in the industry from around the world.
+                    </p>
+                </div>
+            </div>
+            <div
+                class="col-9 col-md-5 col-lg-3 m-2 row justify-content-center align-items-center cards bg-transparent order-1 order-lg-2">
+                <div class="imagetop row align-items-center justify-content-center">
+                    <img src="images/logos/PESlogo.png" alt="X" class="img-fluid my-5 my-md-0">
+                </div>
+            </div>
+            <div class="col-9 col-md-5 col-lg-3 m-2 row justify-content-center cards order-3">
+                <div class="imagetop text-center">
+                    <img src="images/svgs/information.svg" alt="X" class="img-fluid p-3">
+                </div>
+                <div class="cardtext">
+                    <h3>Access to information</h3>
+                    <p>
+                        Members have exclusive access to a vast library of engineering literature. Resources
+                        have never been more easy to access.
+                    </p>
+                </div>
+            </div>
+            <div class="col-9 col-md-5 col-lg-3 m-2 row justify-content-center cards mt-lg-5 order-4 d-none disappear3"
+                id="volunt">
+                <div class="imagetop text-center">
+                    <img src="images/svgs/Volunteering.svg" alt="X" class="img-fluid p-3">
+                </div>
+                <div class="cardtext">
+                    <h3>Volunteering</h3>
+                    <p>
+                        Conduct, participate or volunteer in webinars, workshops and even international conferences
+                        with the plethora of connections that come with the IEEE PES brand.
+                    </p>
+                </div>
+            </div>
+            <div class="col-9 col-md-5 col-lg-3 m-2 row justify-content-center cards mt-lg-5 order-5 d-none disappear3">
+                <div class="imagetop text-center">
+                    <img src="images/svgs/discount.svg" alt="X" class="img-fluid p-3">
+                </div>
+                <div class="cardtext">
+                    <h3>Discounts</h3>
+                    <p>
+                        Bear minimal expenses at our events! By becoming an IEEE PES member, you get to access
+                        various
+                        conferences, events and seminars at special prices, sometimes even for free.
+                    </p>
+                </div>
+            </div>
+            <div class="col-9 col-md-5 col-lg-3 m-2 row justify-content-center cards mt-lg-5 order-6 d-none disappear3">
+                <div class="imagetop text-center">
+                    <img src="images/svgs/tech.svg" alt="X" class="img-fluid p-3">
+                </div>
+                <div class="cardtext">
+                    <h3>Complementary Magazine</h3>
+                    <p>
+                        With an IEEE PES membership, you also get a subscription to a hard-copy of the award-winning
+                        IEEE Power & Energy Magazine.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center pt-3 pt-lg-5">
+            <div class="col-9 col-md-8 row justify-content-center pb-3 cardbutton1">
+                <a onclick="expand3()" href="#volunt" class="btn btn-outline-info"
+                    style="width: 100%; padding: 2vh;">View More</a>
+            </div>
+            <div class="col-9 col-md-8 row justify-content-center pb-3 d-none cardbutton2">
+                <a onclick="expand3()" href="#fullset" class="btn btn-outline-info"
+                    style="width: 100%; padding: 2vh;">View Less</a>
+            </div>
+            <div class="col-9 col-md-8 row justify-content-center">
+                <a target="_blank"
+                    href="https://www.ieee.org/membership-catalog/productdetail/showProductDetailPage.html?product=MEMPE031&refProd=MEMPE031"
+                    class="btn btn-outline-info" style="width: 100%; padding: 2vh;">Join IEEE PES</a>
+            </div>
+        </div>
+    </section>
+</section>
+<section id="ending" class="pb-2">
+    <section id="contact" class="pt-3 pt-lg-5 container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-6">
+                <div class="pl-3 pl-lg-2">
+                    <h1 class="animated fadeInLeft pt-2" data-wow-delay="300ms">Contact us</h1>
+                </div>
+                <div class="mt-3 mt-lg-4 animated fadeIn pl-3 pl-lg-2" data-wow-delay="500ms">
+                    <h3>Address</h3>
+                    <p>IEEE PES Student Branch Chapter<br>
+                        Rajagiri School of Engineering and Technology <br>
+                        Kakkanad, Kochi <br>
+                        Kerala - 682039</p>
+                </div>
+
+                <div class="mt-3 mt-lg-4 animated fadeIn pl-3 pl-lg-2" data-wow-delay="500ms">
+                    <h3>Contact Details</h3>
+                    <p>
+                        Feel free to contact us anytime at our E-mail ID:
+                        <br> rsetieeepessbc@rajagiritech.edu.in
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 mt-4 mt-lg-1">
+                <div class="row justify-content-center mapxx">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15717.132266812512!2d76.3580909!3d9.9934604!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc81786bb40617774!2sRajagiri%20School%20of%20Engineering%20%26%20Technology!5e0!3m2!1sen!2sin!4v1593065372478!5m2!1sen!2sin"
+                        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="credits">
+        <div class="row justify-content-center pt-5 mt-3">
+            <div class="col-12 text-center">
+                <p class="mb-2">
+                    Designed and Developed by <strong>Ananthu T Mani</strong>
+                </p>
+                <p class="icons" id="bottomline">
+                    <a target="_blank" href="https://github.com/ananthutmani">
+                        <i class="pr-2 fa fa-github"></i>
+                    </a>
+                    <a target="_blank" href="https://www.linkedin.com/in/ananthu-t-mani">
+                        <i class="pl-2 fa fa-linkedin"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </section>
+</section>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js'></script>
+<script src="/scripts/scriptpes.js"></script>
+</body>
+
+</html>

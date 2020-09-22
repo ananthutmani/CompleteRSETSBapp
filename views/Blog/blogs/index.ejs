@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="/stylesheets/PFmain.css">
+    <title>The Power Factor</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4 fixed-top">
+        <a class="navbar-brand" href="/pes/pf">The Power Factor</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item <%= typeof page !== 'undefined' && page === 'blogs' ? 'active' : '' %>"><a
+                        class="nav-link" href="/pes/pf/blogs">Home</a></li>
+                <li class="nav-item">
+                    <a href="#exclusives" class="nav-link">Exclusives</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#community" class="nav-link">Community</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <% if(!currentUser){ %>
+                <li class="nav-item <%= typeof page !== 'undefined' && page === 'login' ? 'active' : '' %>"><a
+                        class="nav-link" href="/pes/pf/login">Login</a></li>
+                <li class="nav-item <%= typeof page !== 'undefined' && page === 'register' ? 'active' : '' %>"><a
+                        class="nav-link" href="/pes/pf/register">Sign Up</a></li>
+                <% } else { %>
+                <li class="nav-item"><a class="nav-link" href="#">Signed in as <%= currentUser.username %></a></li>
+                <li class="nav-item"><a class="nav-link" href="/pes/pf/logout">Logout</a></li>
+                <% } %>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <% if(error && (error.length > 0)){ %>
+        <div class="alert alert-danger" role="alert">
+            <%= error %>
+        </div>
+        <% } %>
+        <% if(success && (success.length > 0)){ %>
+        <div class="alert alert-success" role="alert">
+            <%= success %>
+        </div>
+        <% } %>
+    </div>
+    <div class="container mainbody">
+        <% if((currentUser && currentUser.isBlogAdmin)){ %>
+        <div class="alert alert-success" role="alert">
+            Welcome Administrator.
+        </div>
+        <% } %>
+        <header class="jumbotron">
+            <div class="container">
+                <h1>The Power Factor
+                </h1>
+                <hr>
+                <p>Welcome to our blog on power and energy. Here at The Power Factor, we connect through information the
+                    pioneers of a brighter future. Have a go at our vast libraries of exclusive as well as user curated
+                    content!
+                </p>
+                <% if(currentUser && currentUser.isBlogAdmin){%>
+                <p>
+                    <a class="btn btn-success btn-lg" href="/pes/pf/blogs/new">Add new Blog</a>
+                </p>
+                <% } %>
+            </div>
+        </header>
+        <h2 class="pb-2" id="exclusives">Our Exclusives</h2>
+        <hr>
+        <div class="owl-carousel text-center">
+            <% blogs.forEach(function(blog){ %>
+            <% if(blog.isExclusive){ %>
+            <div class="mx-2 fulfill">
+                <div class="card fulfill">
+                    <img src="<%= blog.image %>" class="card-img-top" alt="<%= blog.name %>">
+                    <div class="row fulfill align-items-end">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= blog.name %></h5>
+                            <p class="small">~<em>By <%= blog.authorName %></em></p>
+                            <p class="card-text"><%= blog.description.substring(0, 50) %> ...</p>
+                            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                            <a href="/pes/pf/blogs/<%= blog._id %> " class="btn btn-success">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+            <% }); %>
+        </div>
+        <h2 class="pt-4 pb-2" id="community">Our Community</h2>
+        <hr>
+        <div class="owl-carousel text-center">
+            <% blogs.forEach(function(blog){ %>
+            <% if(!blog.isExclusive){ %>
+            <div class="mx-2 fulfill">
+                <div class="card fulfill">
+                    <img src="<%= blog.image %>" class="card-img-top" alt="<%= blog.name %>">
+                    <div class="row fulfill align-items-end">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= blog.name %></h5>
+                            <p class="small">~<em>By <%= blog.authorName %></em></p>
+                            <p class="card-text"><%= blog.description.substring(0, 50) %> ...</p>
+                            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                            <a href="/pes/pf/blogs/<%= blog._id %> " class="btn btn-success">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+            <% }); %>
+        </div>
+    </div>
+    <section id="ending" class="mt-5 pb-4 bg-dark">
+        <section id="contact" class="pt-3 pt-lg-5 container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-6">
+                    <div class="pl-3 pl-lg-2">
+                        <h1 class="animated fadeInLeft pt-2" data-wow-delay="300ms">Contact us</h1>
+                    </div>
+                    <div class="mt-3 mt-lg-4 animated fadeIn pl-3 pl-lg-2" data-wow-delay="500ms">
+                        <h3>Address</h3>
+                        <p>IEEE PES Student Branch Chapter<br>
+                            Rajagiri School of Engineering and Technology <br>
+                            Kakkanad, Kochi <br>
+                            Kerala - 682039</p>
+                    </div>
+
+                    <div class="mt-3 mt-lg-4 animated fadeIn pl-3 pl-lg-2" data-wow-delay="500ms">
+                        <h3>Contact Details</h3>
+                        <p>
+                            Feel free to contact us anytime at our E-mail ID:
+                            <br> rsetieeepessbc@rajagiritech.edu.in
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 mt-4 mt-lg-1">
+                    <div class="row justify-content-center mapxx">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15717.132266812512!2d76.3580909!3d9.9934604!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc81786bb40617774!2sRajagiri%20School%20of%20Engineering%20%26%20Technology!5e0!3m2!1sen!2sin!4v1593065372478!5m2!1sen!2sin"
+                            frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                            tabindex="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="credits">
+            <div class="row justify-content-center pt-5 mt-3">
+                <div class="col-12 text-center">
+                    <p class="mb-2">
+                        Designed and Developed by <strong>Ananthu T Mani</strong>
+                    </p>
+                    <p class="icons" id="bottomline">
+                        <a target="_blank" href="https://github.com/ananthutmani">
+                            <i class="pr-2 fa fa-github"></i>
+                        </a>
+                        <a target="_blank" href="https://www.linkedin.com/in/ananthu-t-mani">
+                            <i class="pl-2 fa fa-linkedin"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: false,
+                margin: 10,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: true
+                    },
+                    600: {
+                        items: 3,
+                        nav: false
+                    }
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1092 @@
+html{
+    scroll-behavior: smooth;
+}
+html,body {
+	margin:0;
+    padding:0;
+    width: 100vw;
+    background-image: url(../../images/svgs/bg1.svg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* color: #068206; */
+	overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: Montserrat;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+section{
+    width: 100%;
+}
+/* Foriegn CSS start*/
+/* preloaderbegin */
+#preloader {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom right, rgba(6, 170, 6, 1), palegreen);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    opacity: 1;
+}
+
+.container1 {
+    width: 100px;
+    margin: 3em auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.st0 {
+    fill: yellow;
+}
+
+.st1 {
+    fill: none;
+    stroke: black;
+    stroke-width: 4;
+    stroke-miterlimit: 10;
+}
+
+.st2 {
+    fill: none;
+    opacity: .5;
+    stroke: yellow;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+}
+
+#one {
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-animation: line-glow 1s .1s infinite;
+    animation: line-glow 1s .1s infinite;
+}
+
+#two {
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-animation: line-glow 1s .2s infinite;
+    animation: line-glow 1s .2s infinite;
+}
+
+#three {
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-animation: line-glow 1s .3s infinite;
+    animation: line-glow 1s .3s infinite;
+}
+
+#four {
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-animation: line-glow 1s .4s infinite;
+    animation: line-glow 1s .4s infinite;
+}
+
+#five {
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-animation: line-glow 1s .5s infinite;
+    animation: line-glow 1s .5s infinite;
+}
+
+#six {
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-animation: line-glow 1s .6s infinite;
+    animation: line-glow 1s .6s infinite;
+}
+
+#seven {
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-animation: line-glow 1s .7s infinite;
+    animation: line-glow 1s .7s infinite;
+}
+
+#bulb-body-fill {
+    -webkit-animation: bulb-on 1s ease infinite;
+    animation: bulb-on 1s ease infinite;
+}
+
+@-webkit-keyframes line-glow {
+    10% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+@keyframes line-glow {
+    10% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes bulb-on {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bulb-on {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Preloader end */
+
+/* Nav new exp start */
+/* The side navigation menu */
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    right: 0;
+    background-image: linear-gradient(to top right, rgba(6, 170, 6, 1), rgba(6, 170, 6, 0.8), rgba(6, 170, 6, 0.6));
+    /* Black*/
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 15vh;
+    /* Place content 60px from the top */
+    transition: 0.8s;
+    /* 0.5 second transition effect to slide in the sidenav */
+    text-align: center;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: 700;
+    color: aliceblue;
+    display: block;
+    transition: 0.3s;
+}
+
+#special {
+    color: palegoldenrod;
+}
+
+#special:hover {
+    color: yellow;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    /* background: white;
+    border-radius: 30px; */
+    color: #3f3e3e;
+    transition: 0.3s;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 0 5vh;
+}
+ /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-width: 400px) {
+    .sidenav {
+        padding-top: 20vh;
+    }
+
+    .sidenav a {
+        font-size: 4vh;
+    }
+}
+
+#opener {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 10vh;
+    height: 10vh;
+    background: url(../../images/svgs/ham.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.closebtn {
+    position: fixed;
+    top: 10vh;
+    right: 10vh;
+    width: 10vh;
+    height: 15vh;
+    background: url(../../images/svgs/close.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* New nav exp end */
+/* Execom circles */
+.whitecircle {
+    background-color: #fff;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.066);
+    transition: box-shadow .3s;
+}
+.whitecircle:hover {
+    box-shadow: 5px 5px 11px rgba(0, 0, 0, 0.3);
+}
+.orangecircle {
+    background-color: rgba(6, 170, 6, 0.7);
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+
+.execomimage {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.execomimage img {
+    height: 140px;
+    width: auto;
+}
+
+.execommembers h4 {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.execommembers h3 {
+    font-weight: 600;
+    font-size: 20px;
+}
+#execom h1, #counter h1{
+    font-size: 40px;
+}
+.uline{
+    width: 12%;
+    background-color: #3F3E3E;
+    padding-bottom: 5px;
+    border-radius: 30px;
+}
+
+/* Execom circles */
+
+/* Foriegn CSS end*/
+#hero{
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: white;
+}
+.newblack{
+    /* border-left: 5px solid rgba(6, 170, 6, 1); */
+    border-left: 5px solid #3F3E3E;
+    overflow: hidden;
+}
+.newgreen{
+    width: 15%;
+    border: 5px solid #06AA06;
+    border-radius: 30px;
+    overflow: hidden;
+    margin: 1vh auto;
+}
+
+#mainwrapper{
+    background-image: url(../../images/bg1.svg);
+    background-attachment: fixed;
+    opacity: 1;
+}
+/* bg slider start */
+#page, .cb-slideshow { 
+	margin:0;
+    padding:0;
+}
+#page{
+    height: 0;
+}
+
+.cb-slideshow li span { 
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+	-webkit-backface-visibility: hidden;
+    -webkit-animation: imageAnimation 36s linear infinite 0s;
+    -moz-animation: imageAnimation 36s linear infinite 0s;
+    -o-animation: imageAnimation 36s linear infinite 0s;
+    -ms-animation: imageAnimation 36s linear infinite 0s;
+    animation: imageAnimation 36s linear infinite 0s; 
+}
+
+.cb-slideshow li:nth-child(1) span { 
+    background-image: url(../../images/Photos/1.jpg); 
+}
+.cb-slideshow li:nth-child(2) span { 
+    background-image: url(../../images/Photos/2.jpg);
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s; 
+}
+.cb-slideshow li:nth-child(3) span { 
+    background-image: url(../../images/Photos/3.jpg);
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s; 
+}
+.cb-slideshow li:nth-child(4) span { 
+    background-image: url(../../images/Photos/4.jpg);
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s; 
+}
+.cb-slideshow li:nth-child(5) span { 
+    background-image: url(../../images/Photos/5.jpg);
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s; 
+}
+.cb-slideshow li:nth-child(6) span { 
+    background-image: url(../../images/Photos/6.jpg);
+    -webkit-animation-delay: 30s;
+    -moz-animation-delay: 30s;
+    -o-animation-delay: 30s;
+    -ms-animation-delay: 30s;
+    animation-delay: 30s; 
+}
+
+/* Animation for the slideshow images */
+@-webkit-keyframes imageAnimation { 
+    0% { opacity: 0;
+    -webkit-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -webkit-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-moz-keyframes imageAnimation { 
+    0% { opacity: 0;
+    -moz-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -moz-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-o-keyframes imageAnimation { 
+    0% { opacity: 0;
+    -o-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -o-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-ms-keyframes imageAnimation { 
+    0% { opacity: 0;
+    -ms-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -ms-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@keyframes imageAnimation { 
+    0% { opacity: 0;
+    animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+/* Show at least something when animations not supported */
+.no-cssanimations .cb-slideshow li span{
+	opacity: 1;
+}
+h1, h2{
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: rgba(6, 170, 6, 1);
+}
+.heading h1 {
+    font-family: Nunito;
+    font-weight: 800;
+    padding-top: 20vh;
+    /* color: #3f3e3e; */
+    color: #303030;
+    font-size: 60px;
+}
+.heading h3 {
+    font-size: 28px;
+}
+/* bg slider end */
+
+/* Image slider CSS start*/
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    background-color: black;
+    box-shadow: 5px 5px 11px rgba(0, 0, 0, 0.5); 
+    transition: box-shadow .3s;
+}
+.mySlides:hover {
+    box-shadow: 5px 5px 11px rgba(0, 0, 0, 0.8); 
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fadex;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fadex;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fadex {
+    0% {
+        opacity: .4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadex {
+    from {
+        opacity: .4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade:not(.show) {
+    opacity: 1;
+}
+
+/* Image overlay start */
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: justify;
+}
+
+.imagebox:hover .image {
+    opacity: 0.3;
+}
+
+.imagebox:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+}
+
+#hovertitle {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#hovertext {
+    font-size: 20px;
+}
+/* Image slider CSS end*/
+
+/* Accordion start */
+.accordion {
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.4s;
+  }
+.cardarray{
+    height: 100%;
+    background: whitesmoke;
+    border: 2px solid rgba(6, 170, 6, 0.3);
+    border-radius: 30px;
+    transition: box-shadow .3s;
+    margin-top: 2vh;
+}
+
+.cardarray h2{
+    font-family: Nunito;
+}
+.cardarray p{
+    font-size: 16px;
+}
+.alter{
+    background-color: gainsboro;
+}
+.unalter{
+    background-color: white;
+}
+  .accordion:hover .accordion:after {
+    color: #fff;
+}
+.PES:hover, .PES.active{
+    background-color: #24bf24;
+    color: white;
+}
+  .IAS:hover, .IAS.active{
+    background-color: black;
+    color: white;
+}
+  .CS:hover, .CS.active{
+    background-color: gold;
+    color: black;
+}
+  .WIE:hover, .WIE.active{
+    background-color: #682589;
+    color: white;
+}
+  .eig:hover, .eig.active{
+    background-color: rgba(6, 170, 6, 0.8);
+    color: white;
+}
+  .csi:hover, .csi.active{
+    background-color: rgba(255, 165, 0, 0.9);
+    color: white;
+}
+  .accordion:after {
+    content: '\002B';
+    font-weight: 700;
+    float: right;
+    margin-left: 5px;
+  } 
+  .active:after {
+    content: "\2212";
+  }
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+/* Accordion end */
+.btn-outline-info {
+    color: #338EB8;
+    border-color: #338EB8;
+}
+.parent{
+    margin-bottom: 20px;
+}
+
+.btn-outline-info:hover {
+    background-color: #338EB8;
+}
+
+p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.panel h2{
+    font-size: 22px;
+}
+.panel p{
+    font-size: 16px;
+}
+
+.botmarg{
+    padding-bottom: 6vh;
+}
+.cardtext p{
+    font-size: 16px;
+}
+.cards{
+    background-color: rgba(6, 170, 6, 1);
+    color: white;
+    transition: box-shadow .3s;
+}
+
+.cardtext h3{
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+/* 
+.cards:hover{
+    animation-name: pulse;
+    animation-duration: 1s;
+} */
+.cards:hover, .cardarray:hover, .mapxx:hover {
+    box-shadow: 5px 5px 11px rgba(0, 0, 0, 0.3);
+  }
+#nohov:hover{
+    box-shadow: none;
+}
+.timer1, .timer2, .timer3{
+    color: rgba(6, 170, 6, 1);
+
+}
+
+.countnum{
+    font-weight: 700;
+    font-size: 50px;
+    /* color: #3F3E3E; */
+    color: dimgray;
+}
+#counter p{
+    /* color: orange; */
+    display: inline-block;
+    height: 20vh;
+    text-align: center;
+    display: block;
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .btn.btn-outline-info{
+      color: rgba(6, 170, 6, 1);
+      border-color: rgba(6, 170, 6, 1);
+  }
+.btn.btn-outline-info:hover{
+      color:white;
+      background-color: rgba(6, 170, 6, 1);
+  }
+  #ending{
+    color: white;
+    background-color: rgba(0, 150, 0, 1);
+}
+#ending h1{
+    color: white;
+    font-weight: 500;
+}
+#ending h3{
+    font-size: 19px;
+    font-weight: 500;
+}
+#ending p{
+    font-size: 15px;
+    font-weight: 400;
+}
+  #credits p{
+    font-size: 15px;
+    color: white; 
+  }
+  #credits i{
+     font-size: 30px;
+  }
+  #credits p a{
+      color: white;
+      font-weight: 600;
+  } 
+  .imagetop img{
+    width: 90%;
+    }
+    .mapxx{
+        height: 100%;
+        width: 100%;
+        transition: box-shadow .3s;
+    }
+    .mapxx iframe{
+        height: 100%;
+        width: 100%;
+    }
+/* Testimonial */
+.testimonial{ margin: 0 20px 50px; }
+.testimonial .pic{
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 0 15px 15px 0;
+}
+.testimonial .pic img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+
+}
+.testimonial .testimonial-profile{
+    display: inline-block;
+    position: relative;
+    top: 15px;
+}
+.testimonial .title{
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    color: #2f2f2f;
+    text-transform: capitalize;
+    margin: 0 0 7px 0;
+}
+.testimonial .post{
+    display: block;
+    font-size: 14px;
+    color: #5d7aa7;
+}
+.testimonial .description{
+    padding: 20px 22px;
+    background: rgba(6, 170, 6, 1);
+    font-size: 15px;
+    color: #fff;
+    line-height: 25px;
+    margin: 0;
+    position: relative;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); 
+    transition: box-shadow .3s;
+}
+.testimonial .description:hover{
+    box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.7); 
+}
+.testimonial .description:before,
+.testimonial .description:after{
+    content: "";
+    border-width: 18px 0 0 18px;
+    border-style: solid;
+    border-color: #5d7aa7 transparent transparent;
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+}
+.testimonial .description:after{
+    border-width: 18px 18px 0 0;
+    left: auto;
+    right: 0;
+}
+.owl-theme .owl-controls{
+    margin-top: 10px;
+    margin-left: 30px;
+}
+div.owl-buttons{
+justify-content: start;
+}
+.owl-theme .owl-controls .owl-buttons div{
+    opacity: 0.8;
+    background: #fff;
+}
+.owl-prev:before,
+.owl-next:before{
+    content: "<";
+    font-family: "Montserrat"; font-weight: 700;
+    font-size: 40px;
+    color: black;
+}
+.owl-next:before{ content: ">"; }
+/* Testimonial */
+
+@media screen and (max-width: 1000px) {
+    #hero{
+        background: url(../../images/Photos/1.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: 50% 50%;
+        background-repeat: none;
+        width: 100%;
+    }
+    p{
+        font-size: 16px;
+    }
+    .accordion{
+        font-size: 16px;
+    }
+    .slideshow-container {
+        max-width: 90%;
+    }
+    .orangecircle {
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+    }    
+    .whitecircle {
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+    }
+    .mapxx iframe{
+        height: 300px;
+    }
+    .execomimage {
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    #hovertitle {
+        font-size: 17px;
+    }
+
+    #hovertext {
+        font-size: 15px;
+    }
+
+    .execomimage img {
+        height: 110px;
+        width: auto;
+    }
+
+    .execommembers h3 {
+        font-size: 17px;
+        min-height: 40px;
+    }
+
+    .execommembers h4 {
+        font-weight: 400;
+        font-size: 15px;
+    }
+    #execom h1, #counter h1{
+        font-size: 27px;
+    }
+    #credits p{
+        font-size: 12px;
+    }
+    #credits i{
+        font-size: 23px;
+     }
+    .sidenav a {
+        font-size: 35px;
+    }
+    .imagetop img{
+        width: 70%;
+    }
+    .heading h3 {
+        font-size: 20px;
+    }
+    .heading h1 {
+        padding-top: 20vh;
+        /* color: #3f3e3e; */
+        color: #303030;
+        font-size: 50px;
+    }
+    .cardarray p{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+        h1,h2 {
+            font-size: 23px;
+        }  
+        h3 {
+            font-size: 16px;
+        }
+        p {
+            font-size: 15px;
+        }
+        .countnum{
+            font-size: 38px;
+        }
+        #counter p{
+            font-size: 19px;
+        }
+        .cardtext p{
+            font-size: 13px;
+        }
+        .cardtext h3{
+        font-size: 16px;
+        }
+        #hovertitle {
+            font-size: 12px;
+        }
+        .mapxx iframe{
+            margin-left: 20px;
+            height: 250px;
+        }    
+        #hovertext {
+            font-size: 9px;
+        }
+        .panel p{
+            font-size: 13px;
+        }
+        .panel h2{
+            font-size: 16px;
+        }
+        #credits p{
+            font-size: 10px;
+        }    
+        #credits i{
+            font-size: 20px;
+        }
+        .botmarg{
+            padding-bottom: 4vh;
+        }
+        .sidenav a {
+            font-size: 30px;
+        }
+        .imagetop img{
+            width: 90%;
+        }
+        #execom h1, #counter h1{
+            font-size: 27px;
+        }
+        #opener {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            width: 5vh;
+            height: 5vh;
+            background: url(../../images/svgs/ham.svg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 1;
+            cursor: pointer;
+        }
+        .closebtn {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 5vh;
+            height: 5vh;
+            background: url(../../images/svgs/close.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 1;
+            cursor: pointer;
+        }
+        .sidenav .closebtn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 36px;
+        }
+        .heading h3 {
+            font-size: 15px;
+        }
+        .heading h1 {
+            padding-top: 20vh;
+            /* color: #3f3e3e; */
+            color: #303030;
+            font-size: 40px;
+        }
+        .cardarray p{
+            font-size: 12px;
+        }
+}
+
+
