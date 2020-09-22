@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4 fixed-top">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="/pes/pf">The Power Factor</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,10 +83,10 @@
         </header>
         <h2 class="pb-2" id="exclusives">Our Exclusives</h2>
         <hr>
-        <div class="owl-carousel text-center">
+        <div class="row text-center">
             <% blogs.forEach(function(blog){ %>
             <% if(blog.isExclusive){ %>
-            <div class="mx-2 fulfill">
+            <div class="col-12 col-md-6 col-lg-4 my-2" style="min-height: 400px;">
                 <div class="card fulfill">
                     <img src="<%= blog.image %>" class="card-img-top" alt="<%= blog.name %>">
                     <div class="row fulfill align-items-end">
@@ -105,10 +105,10 @@
         </div>
         <h2 class="pt-4 pb-2" id="community">Our Community</h2>
         <hr>
-        <div class="owl-carousel text-center">
+        <div class="row text-center">
             <% blogs.forEach(function(blog){ %>
             <% if(!blog.isExclusive){ %>
-            <div class="mx-2 fulfill">
+            <div class="col-12 col-md-6 col-lg-4 my-2" style="min-height: 400px;">
                 <div class="card fulfill">
                     <img src="<%= blog.image %>" class="card-img-top" alt="<%= blog.name %>">
                     <div class="row fulfill align-items-end">

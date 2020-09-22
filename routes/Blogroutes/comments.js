@@ -11,7 +11,7 @@ router.get("/new", middleware.isLoggedIn, function (req, res) {
             console.log(err);
         }
         else {
-            res.render("comments/new", { blog: blog });
+            res.render("Blog/comments/new", { blog: blog });
         }
     })
 });
@@ -53,7 +53,7 @@ router.get("/:comment_id/edit", middleware.checkCommentOwnership, function (req,
             res.redirect("back");
         }
         else {
-            res.render("comments/edit", { blog_id: req.params.id, comment: foundComment });
+            res.render("Blog/comments/edit", { blog_id: req.params.id, comment: foundComment });
         }
     });
 });

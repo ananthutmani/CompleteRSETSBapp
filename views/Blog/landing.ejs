@@ -322,28 +322,25 @@
                     </p>
                 </div>
 
-                <div class="owl-carousel text-center">
+                <div class="owl-carousel owl-theme text-center">
                     <% for( var i=(blogs.length)-1; i>=0; i--){ %>
                     <% if(!blogs[i].isExclusive){ %>
-                    <div class="mx-2 fulfill">
-                        <div class="card fulfill">
+                        <div class="card">
                             <img src="<%= blogs[i].image %>" class="card-img-top" alt="<%= blogs[i].name %>">
-                            <div class="row fulfill align-items-end">
+                            <div class="row align-items-end">
                                 <div class="card-body">
                                     <h5 class="card-title"><%= blogs[i].name %></h5>
                                     <p class="small">~<em>By <%= blogs[i].authorName %></em></p>
                                     <p class="card-text"><%= blogs[i].description.substring(0, 50) %> ...</p>
-                                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
                                     <a href="/pes/pf/blogs/<%= blogs[i]._id %> " class="btn btn-success">Read More</a>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     <% } %>
                     <% } %>
                 </div>
                 <div class="row mt-4 justify-content-center">
-                    <a href="/pes/pf/blogs" class="btn btn-lg btn-success" style="min-width: 50%;">View All</a>
+                    <a href="/pes/pf/blogs" class="btn btn-lg btn-success col-6" >View All</a>
                 </div>
         </section>
 
@@ -429,8 +426,12 @@
                         nav: true
                     },
                     600: {
+                        items: 2,
+                        nav: true
+                    },
+                    1000: {
                         items: 3,
-                        nav: false
+                        nav: true
                     }
                 }
             })

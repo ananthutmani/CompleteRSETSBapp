@@ -7,12 +7,7 @@ html,body{
     background-repeat: no-repeat;
     scroll-behavior: smooth;
 }
-.owl-carousel .owl-stage{display: flex;}
-.article-items {
-    display: flex;
-    flex: 1 0 auto;
-    height: 100%;
-}
+
 .overlayer {
     background-color: rgba(255, 255, 255, 0.6);
 }
@@ -267,8 +262,20 @@ hr{
         opacity: 1;
     }
 }
-
-
+.owl-carousel .owl-stage{display: flex;}
+.article-items {
+    display: flex;
+    flex: 1 0 auto;
+    height: 100%;
+}
+.aticle-box {
+    position: relative;
+    overflow: hidden;
+    /* margin-bottom: 80px; *//*This is optional*/
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
 @media screen and (max-width: 1000px) {
     .mapxx iframe{
         height: 300px;
