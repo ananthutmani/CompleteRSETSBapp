@@ -84,46 +84,46 @@
         <h2 class="pb-2" id="exclusives">Our Exclusives</h2>
         <hr>
         <div class="row text-center">
-            <% blogs.forEach(function(blog){ %>
-            <% if(blog.isExclusive){ %>
+            <% for(var i=(blogs.length-1); i>=0;i--){ %>
+            <% if(blogs[i].isExclusive){ %>
             <div class="col-12 col-md-6 col-lg-4 my-2" style="min-height: 400px;">
                 <div class="card fulfill">
-                    <img src="<%= blog.image %>" class="card-img-top" alt="<%= blog.name %>">
+                    <img src="<%= blogs[i].image %>" class="card-img-top" alt="<%= blogs[i].name %>">
                     <div class="row fulfill align-items-end">
                         <div class="card-body">
-                            <h5 class="card-title"><%= blog.name %></h5>
-                            <p class="small">~<em>By <%= blog.authorName %></em></p>
-                            <p class="card-text"><%= blog.description.substring(0, 50) %> ...</p>
+                            <h5 class="card-title"><%= blogs[i].name %></h5>
+                            <p class="small">~<em>By <%= blogs[i].authorName %></em></p>
+                            <p class="card-text"><%= blogs[i].description.substring(0, 50) %> ...</p>
                             <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                            <a href="/pes/pf/blogs/<%= blog._id %> " class="btn btn-success">Read More</a>
+                            <a href="/pes/pf/blogs/<%= blogs[i]._id %> " class="btn btn-success">Read More</a>
                         </div>
                     </div>
                 </div>
             </div>
             <% } %>
-            <% }); %>
+            <% } %>
         </div>
         <h2 class="pt-4 pb-2" id="community">Our Community</h2>
         <hr>
         <div class="row text-center">
-            <% blogs.forEach(function(blog){ %>
-            <% if(!blog.isExclusive){ %>
+            <% for(var i=(blogs.length-1); i>=0;i--){ %>
+            <% if(!blogs[i].isExclusive){ %>
             <div class="col-12 col-md-6 col-lg-4 my-2" style="min-height: 400px;">
                 <div class="card fulfill">
-                    <img src="<%= blog.image %>" class="card-img-top" alt="<%= blog.name %>">
+                    <img src="<%= blogs[i].image %>" class="card-img-top" alt="<%= blogs[i].name %>">
                     <div class="row fulfill align-items-end">
                         <div class="card-body">
-                            <h5 class="card-title"><%= blog.name %></h5>
-                            <p class="small">~<em>By <%= blog.authorName %></em></p>
-                            <p class="card-text"><%= blog.description.substring(0, 50) %> ...</p>
+                            <h5 class="card-title"><%= blogs[i].name %></h5>
+                            <p class="small">~<em>By <%= blogs[i].authorName %></em></p>
+                            <p class="card-text"><%= blogs[i].description.substring(0, 50) %> ...</p>
                             <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                            <a href="/pes/pf/blogs/<%= blog._id %> " class="btn btn-success">Read More</a>
+                            <a href="/pes/pf/blogs/<%= blogs[i]._id %> " class="btn btn-success">Read More</a>
                         </div>
                     </div>
                 </div>
             </div>
             <% } %>
-            <% }); %>
+            <% } %>
         </div>
     </div>
     <section id="ending" class="mt-5 pb-4 bg-dark">
