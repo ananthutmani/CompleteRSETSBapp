@@ -1,20 +1,22 @@
 var express = require("express"),
     app = express(),
-    request = require("request"),
+    // request = require("request"),
     bodyParser = require("body-parser"),
     methodOverride = require("method-override"),
     mongoose = require("mongoose"),
     passport = require("passport"),
     LocalStrategy = require("passport-local"),
-    passportLocalMongoose = require("passport-local-mongoose"),
+    // passportLocalMongoose = require("passport-local-mongoose"),
     flash = require("connect-flash"),
-    Event = require("./models/PESmodels/events"),
-    User = require("./models/users"),
-    Blog = require("./models/Blogmodels/blogs"),
-    Comment = require("./models/Blogmodels/comment"),
-    middleware = require("./middleware");
+    // Event = require("./models/PESmodels/events"),
+    // SBEvent = require("./models/SBmodels/events"),
+    User = require("./models/users");
+    // Blog = require("./models/Blogmodels/blogs"),
+    // Comment = require("./models/Blogmodels/comment"),
+    // middleware = require("./middleware");
 
 var PESRoutes = require("./routes/PESroutes/index"),
+    SBRoutes = require("./routes/SBroutes/index"),
     BlogCommentRoutes = require("./routes/Blogroutes/comments"),
     BlogRoutes = require("./routes/Blogroutes/blogs"),
     BlogIndexRoutes = require("./routes/Blogroutes/index");
@@ -54,9 +56,8 @@ app.use(function (req, res, next) {
     next();
 });
 // temporary
-app.get("/", function(req, res){
-    res.redirect("/pes");
-})
+
+app.use("/", SBRoutes);
 app.use("/pes", PESRoutes);
 app.use("/pes/pf",  BlogIndexRoutes);
 app.use("/pes/pf/blogs", BlogRoutes);

@@ -1,0 +1,656 @@
+html, body{
+    overflow-x: hidden;
+    background-image: url("../images/svgs/bg1.svg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    scroll-behavior: smooth;
+    color: rgba(0, 0, 0, 0.7);
+
+}
+.maxheight{
+ max-height: 100vh;
+ overflow: hidden;
+ z-index: 0;
+}
+.carouselimage{
+    background-position: left;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.carouselimage.one{
+    background-image: url("../images/hero-area/01.png");
+}
+.carouselimage.two{
+    background-image: url("../images/hero-area/02.png");
+}
+.carouselimage.three{
+    background-image: url("../images/hero-area/03.png");
+}
+.navbar img{
+    margin-top: 6px;
+    height: 40px;
+}
+.navbar{
+    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 114, 166, 0.3); */
+    transition: 0.5s;
+}
+.scrolled{
+    background-color: #0072A6;
+}
+/* foreign */
+/* Image Slider start */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    background-color: black;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fadex;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fadex;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fadex {
+    0% {
+        opacity: .4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadex {
+    from {
+        opacity: .4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade:not(.show) {
+    opacity: 1;
+}
+
+/* Image overlay start */
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: justify;
+}
+
+.imagebox:hover .image {
+    opacity: 0.3;
+}
+
+.imagebox:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+}
+
+#hovertitle {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#hovertext {
+    font-size: 20px;
+}
+/* Image slider CSS end*/
+
+#ending{
+    color: white;
+    background-color: #0072A6;
+}
+#ending h1{
+    color: white;
+    font-weight: 500;
+}
+#ending h3{
+    font-size: 19px;
+    font-weight: 500;
+}
+#ending p{
+    font-size: 15px;
+    font-weight: 400;
+}
+#credits p{
+    font-size: 15px;
+    color: white; 
+}
+#credits i{
+     font-size: 30px;
+}
+#credits p a{
+      color: white;
+      font-weight: 600;
+} 
+.mapxx{
+        height: 100%;
+        width: 100%;
+        transition: box-shadow .3s;
+}
+.mapxx iframe{
+        height: 100%;
+        width: 100%;
+}
+.stretcher{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    background-image: url("../images/misc/volunteer.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #0072A6;
+}
+/* .plus{
+    color: orange;
+} */
+.countnum{
+    font-weight: 700;
+    font-size: 50px;
+}
+
+#counter p{
+    display: inline-block;
+    height: 20vh;
+    text-align: center;
+    display: block;
+    font-size: 25px;
+    font-weight: 700;
+  }
+
+.testimonial{ margin: 0 20px 50px; }
+.testimonial .pic{
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 0 15px 15px 0;
+}
+.testimonial .pic img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+
+}
+.testimonial .testimonial-profile{
+    display: inline-block;
+    position: relative;
+    top: 15px;
+}
+.testimonial .title{
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    color: #2f2f2f;
+    text-transform: capitalize;
+    margin: 0 0 7px 0;
+}
+.testimonial .post{
+    display: block;
+    font-size: 14px;
+    color: #5d7aa7;
+}
+.testimonial .description{
+    padding: 20px 22px;
+    background: #0072A6;
+    font-size: 15px;
+    color: #fff;
+    line-height: 25px;
+    margin: 0;
+    position: relative;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); 
+    transition: box-shadow .3s;
+}
+.testimonial .description:hover{
+    box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.7); 
+}
+.testimonial .description:before,
+.testimonial .description:after{
+    content: "";
+    border-width: 18px 0 0 18px;
+    border-style: solid;
+    border-color: #5d7aa7 transparent transparent;
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+}
+.testimonial .description:after{
+    border-width: 18px 18px 0 0;
+    left: auto;
+    right: 0;
+}
+.owl-theme .owl-controls{
+    margin-top: 10px;
+    margin-left: 30px;
+}
+div.owl-buttons{
+justify-content: start;
+}
+.owl-theme .owl-controls .owl-buttons div{
+    opacity: 0.8;
+    background: #fff;
+}
+.owl-prev:before,
+.owl-next:before{
+    content: "<";
+    font-family: "Montserrat"; font-weight: 700;
+    font-size: 40px;
+    color: black;
+}
+.owl-next:before{ content: ">"; }
+.eventcards{
+    /* background-color:whitesmoke; */
+    color: #0072A6;
+    overflow: hidden;
+}
+
+.eventcardholder{
+    color: #0072A6;
+}
+.eventcardholder p{
+    font-size: 16px;
+    text-align: justify;
+    color: dimgrey;
+}
+.seperator{
+    border: 1px solid orange;
+    border-radius: 30px;
+    width: 50%;
+}
+/* trial 1 */
+.btn-outline-info {
+    color: #0072A6;
+    border-color: #0072A6;
+}
+.parent{
+    margin-bottom: 20px;
+}
+
+.btn-outline-info:hover {
+    background-color: #0072A6;
+}
+
+p{
+    font-size: 18px;
+}
+
+.panel h2{
+    font-size: 22px;
+}
+.panel p{
+    font-size: 16px;
+}
+
+.botmarg{
+    padding-bottom: 6vh;
+}
+.cardtext p{
+    font-size: 16px;
+}
+.cards{
+    /* border: 1px solid #0072A6; */
+    /* border-radius: 30px; */
+    color: #0072A6;
+    text-align: justify;
+}
+.ieeecard{
+    border: none;
+}
+.cardtext h3{
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+h1{
+    color: #0072A6;
+}
+.stretcher h1{
+    color: white;
+}
+
+/* Execom Circles */
+.execomimage {
+    height: 145px;
+    width: 150px;
+    transition: 0.4s;
+    overflow: hidden;
+}
+.execomimage:hover{
+    box-shadow: 4px 4px 15px dimgray;
+}
+
+.execommembers h4 {
+    font-size: 16px;
+    font-weight: 200;
+}
+.execommembers h3 {
+    font-weight: 600;
+    font-size: 20px;
+    min-height: 48px;
+}
+#execom h1, #counter h1{
+    font-size: 40px;
+}
+/* Execom Circles */
+.fixed-top{
+    z-index: 998;
+}
+/* Society divs */
+
+.societydivs img{
+    max-height: 180px;
+}
+.colorwrapper{
+    background-color: #0072A6;
+    color: white;
+    min-height: 390px;
+}
+.colorwrapper p{
+    font-size: 1rem;
+}
+/* Society divs */
+
+.achievement-block img{
+    max-height: 400px;
+}
+/* Preloader */
+#preloader {
+    height: 100vh;
+    width: 100%;
+    background-color: #0072A6;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    opacity: 1;
+}
+#about{
+    margin-top: 10vh;
+}
+.container1 {
+    width: 100px;
+    margin: 3em auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.st0 {
+    fill: yellow;
+}
+
+.st1 {
+    fill: none;
+    stroke: black;
+    stroke-width: 4;
+    stroke-miterlimit: 10;
+}
+
+.st2 {
+    fill: none;
+    opacity: .5;
+    stroke: orange;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+}
+
+#one {
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-animation: line-glow 1s .1s infinite;
+    animation: line-glow 1s .1s infinite;
+}
+
+#two {
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-animation: line-glow 1s .2s infinite;
+    animation: line-glow 1s .2s infinite;
+}
+
+#three {
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-animation: line-glow 1s .3s infinite;
+    animation: line-glow 1s .3s infinite;
+}
+
+#four {
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-animation: line-glow 1s .4s infinite;
+    animation: line-glow 1s .4s infinite;
+}
+
+#five {
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-animation: line-glow 1s .5s infinite;
+    animation: line-glow 1s .5s infinite;
+}
+
+#six {
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-animation: line-glow 1s .6s infinite;
+    animation: line-glow 1s .6s infinite;
+}
+
+#seven {
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-animation: line-glow 1s .7s infinite;
+    animation: line-glow 1s .7s infinite;
+}
+
+#bulb-body-fill {
+    -webkit-animation: bulb-on 1s ease infinite;
+    animation: bulb-on 1s ease infinite;
+}
+
+@-webkit-keyframes line-glow {
+    10% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+@keyframes line-glow {
+    10% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes bulb-on {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bulb-on {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Preloader */
+/* trial 1 */
+@media screen and (max-width: 1000px) {
+    .mapxx iframe{
+        height: 300px;
+    }
+    #credits p{
+        font-size: 12px;
+    }
+    #credits i{
+        font-size: 23px;
+     }
+    .execomimage {
+        height: 120px;
+        width: 120px;
+        overflow: hidden;
+    }
+    #hovertitle {
+        font-size: 17px;
+    }
+
+    #hovertext {
+        font-size: 15px;
+    }
+
+    .execommembers h3 {
+        font-size: 17px;
+        min-height: 40px;
+    }
+
+    .execommembers h4 {
+        font-weight: 400;
+        font-size: 15px;
+    }
+    #execom h1, #counter h1{
+        font-size: 27px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .mapxx iframe{
+        margin-left: 20px;
+        height: 250px;
+    }    
+    .stretcher{
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        text-align: center;
+    }
+    p{
+        font-size: 16px;
+    }
+    h1{
+        font-size: 1.7rem;
+    }
+     h2{
+        font-size: 1.5rem;
+    }
+     h3{
+        font-size: 1.3rem;
+    }
+    .eventcardholder p{
+        font-size: 14px;
+    }
+    .countnum{
+        font-size: 38px;
+    }
+    #counter p{
+        font-size: 19px;
+    }
+    #credits p{
+        font-size: 10px;
+    }    
+    #credits i{
+        font-size: 20px;
+    }
+    #execom h1, #counter h1{
+        font-size: 27px;
+    }
+    #hovertitle {
+        font-size: 14px;
+    }
+    #hovertext {
+        font-size: 11px;
+    }
+}

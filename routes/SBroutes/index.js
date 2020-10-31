@@ -1,14 +1,14 @@
 var express = require("express"),
     router = express.Router(),
-    // request = require("request"),
-    // bodyParser = require("body-parser"),
-    // methodOverride = require("method-override"),
-    // mongoose = require("mongoose"),
+    // request = require("request"), 
+    // bodyParser = require("body-parser"), 
+    // methodOverride = require("method-override"), 
+    // mongoose = require("mongoose"), 
     passport = require("passport"),
-    // LocalStrategy = require("passport-local"),
-    // passportLocalMongoose = require("passport-local-mongoose"),
-    Event = require("../../models/PESmodels/events"),
-    PESUser = require("../../models/users"),
+    // LocalStrategy = require("passport-local"), 
+    // passportLocalMongoose = require("passport-local-mongoose"), 
+    Event = require("../../models/SBmodels/events"),
+    SBUser = require("../../models/users"),
     middleware = require("../../middleware");
 
 
@@ -18,11 +18,11 @@ router.get("/", function (req, res) {
             console.log(err);
         }
         else {
-            res.render("PES/landing", { event: allEvents });
+            res.render("SB/landing", { event: allEvents });
         }
     });
 });
-router.post("/", middleware.checkPESadmin, function (req, res) {
+router.post("/", middleware.checkSBadmin, function (req, res) {
     var name = req.body.name;
     var image = req.body.image;
     var date = req.body.date;
@@ -36,14 +36,14 @@ router.post("/", middleware.checkPESadmin, function (req, res) {
             console.log(err);
         }
         else {
-            res.redirect("/pes");
+            res.redirect("/");
             console.log(name + " added!")
         }
     })
 });
 // New Route
-router.get("/new", middleware.checkPESadmin, function (req, res) {
-    res.render("PES/new");
+router.get("/new", middleware.checkSBadmin, function (req, res) {
+    res.render("SB/new");
 });
 
 // ================================
@@ -51,71 +51,71 @@ router.get("/new", middleware.checkPESadmin, function (req, res) {
 // ================================
 
 // show Signup
-router.get("/pessigninroute", function (req, res) {
-    res.render("PES/register", { page: 'register' });
+router.get("/sbsigninroute", function (req, res) {
+    res.render("SB/register", { page: 'register' });
 });
 // loginroute
-router.get("/peslogin", function (req, res) {
-    res.render("PES/login", { page: 'login' });
+router.get("/sblogin", function (req, res) {
+    res.render("SB/login", { page: 'login' });
 });
 // Handle Signup Logic
-router.post("/pessigninroute", function (req, res) {
-    var newPESUser = new PESUser({ username: req.body.username });
+router.post("/sbsigninroute", function (req, res) {
+    var newSBUser = new SBUser({ username: req.body.username });
     // var truthVar = process.env.ADMIN;
-    var truthVar = "rset";
+    var truthVar = "rsetsb";
     if (req.body.adminCode == truthVar) {
-        newPESUser.isPESAdmin = true;
+        newSBUser.isSBAdmin = true;
     }
     PESUser.register(newPESUser, req.body.password, function (err, user) {
         if (err) {
             console.log(err);
-            return res.render("PES/register");
+            return res.render("SB/register");
         }
         passport.authenticate("local")(req, res, function () {
-            res.redirect("/pes");
+            res.redirect("/");
         });
     });
 });
 
-router.post("/peslogin", passport.authenticate("local", {
-    successRedirect: "/pes",
-    failureRedirect: "/pes/peslogin"
+router.post("/sblogin", passport.authenticate("local", {
+    successRedirect: "/",
+    failureRedirect: "/sblogin"
 }), function (req, res) { });
 
 // Logout Route
-router.get("/peslogout", function (req, res) {
+router.get("/sblogout", function (req, res) {
     req.logout();
-    res.redirect("/pes");
+    res.redirect("/sb");
 });
 
 // EDIT EVENT ROUTE
-router.get("/:id/edit", middleware.checkPESadmin, function (req, res) {
+router.get("/:id/edit", middleware.checkSBadmin, function (req, res) {
     Event.findById(req.params.id, function (err, foundEvent) {
-        res.render("PES/edit", { event: foundEvent });
+        res.render("SB/edit", { event: foundEvent });
     });
 });
 
 // UPDATE EVENT ROUTE
-router.put("/:id", middleware.checkPESadmin, function (req, res) {
+router.put("/:id", middleware.checkSBadmin, function (req, res) {
     // find and update correct event
     Event.findByIdAndUpdate(req.params.id, req.body.event, function (err, updatedEvent) {
         if (err) {
-            res.redirect("/pes");
+            res.redirect("/");
         }
         else {
-            res.redirect("/pes");
+            res.redirect("/");
         }
     });
 });
 
 // Destroy Event route
-router.delete("/:id", middleware.checkPESadmin, function (req, res) {
+router.delete("/:id", middleware.checkSBadmin, function (req, res) {
     Event.findByIdAndRemove(req.params.id, function (err) {
         if (err) {
-            res.redirect("/pes");
+            res.redirect("/");
         }
         else {
-            res.redirect("/pes");
+            res.redirect("/");
         }
     })
 });

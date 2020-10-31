@@ -1,4 +1,5 @@
 new WOW().init();
+// Preloader
 var loader = document.getElementById("preloader");
 window.addEventListener("load", function () {
     const fadeEffect = setInterval(() => {
@@ -15,30 +16,22 @@ window.addEventListener("load", function () {
         loader.style.visibility = "hidden";
     }, 700);
 });
-
-function openNav() {
-    document.getElementById("mySidenav").style.width = "100%";
-    document.getElementById("opener").style.display = "none";
-    document.querySelector('html').style.overflowY = "hidden";
-}
-
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    setTimeout(function () {
-        document.getElementById("opener").style.display = "block";
-    }, 600);
-    document.querySelector('html').style.overflowY = "scroll";
-}
-
-// Foriegn start
+// Preloader
+// Scroll Color Change
+$(function () {
+    $(document).scroll(function () {
+        var $nav = $("#navbr");
+        var $home = $("#home");
+        $nav.toggleClass("scrolled", $(this).scrollTop() > $home.height());
+    });
+});
+// Scroll Color Change
+// for counter
 var shell = document.querySelector(".parent");
 shell.addEventListener("animationend", function () {
     (function ($) {
         $.fn.countTo = function (options) {
-            // merge the default plugin settings with the custom options
             options = $.extend({}, $.fn.countTo.defaults, options || {});
-
-            // how many times to update the value, and how much to increment the value on each update
             var loops = Math.ceil(options.speed / options.refreshInterval),
                 increment = (options.to - options.from) / loops;
 
@@ -70,20 +63,20 @@ shell.addEventListener("animationend", function () {
         };
 
         $.fn.countTo.defaults = {
-            from: 0,  // the number the element should start at
-            to: 100,  // the number the element should end at
-            speed: 1000,  // how long it should take to count between the target numbers
-            refreshInterval: 100,  // how often the element should be updated
-            decimals: 0,  // the number of decimal places to show
-            onUpdate: null,  // callback method for every time the element is updated,
-            onComplete: null,  // callback method for when the element finishes updating
+            from: 0,
+            to: 100,
+            speed: 1000,
+            refreshInterval: 100,
+            decimals: 0,
+            onUpdate: null,
+            onComplete: null,
         };
     })(jQuery);
 
     jQuery(function ($) {
         $('.timer1').countTo({
             from: 0,
-            to: 20,
+            to: 30,
             speed: 800,
             refreshInterval: 25,
             onComplete: function (value) {
@@ -92,7 +85,7 @@ shell.addEventListener("animationend", function () {
         });
         $('.timer2').countTo({
             from: 0,
-            to: 35,
+            to: 100,
             speed: 1000,
             refreshInterval: 25,
             onComplete: function (value) {
@@ -101,7 +94,7 @@ shell.addEventListener("animationend", function () {
         });
         $('.timer3').countTo({
             from: 0,
-            to: 45,
+            to: 250,
             speed: 1200,
             refreshInterval: 25,
             onComplete: function (value) {
@@ -110,8 +103,8 @@ shell.addEventListener("animationend", function () {
         });
     });
 });
-// Foriegn end
-// gallery start
+// Counter end
+// Gallery
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -132,41 +125,49 @@ function showSlides(n) {
     }
     slides[slideIndex - 1].style.display = "block";
 }
-// gallery end 
-// PES membership benefits
+// Gallery
+$(document).ready(function () {
+    $(".owl-carousel").owlCarousel({
+        items: 2,
+        itemsDesktop: [1000, 2],
+        itemsDesktopSmall: [979, 2],
+        itemsTablet: [768, 1],
+        pagination: false,
+        navigation: true,
+        navigationText: ["", ""],
+        autoPlay: true
+    });
+});
+// execom
+var images1 = document.getElementsByClassName('disappear1');
+var images2 = document.getElementsByClassName('disappear2');
 var cards = document.getElementsByClassName('disappear3');
+var btn1 = document.querySelector('.tier1');
+var btn2 = document.querySelector('.tier2');
+var btn3 = document.querySelector('.tier3');
 var cardbtn1 = document.querySelector('.cardbutton1');
 var cardbtn2 = document.querySelector('.cardbutton2');
+function expand1() {
+    for (var i = 0; i < images1.length; i++)
+        images1[i].classList.toggle('d-none');
+    btn1.classList.toggle('d-none');
+    btn2.classList.toggle('d-none');
+}
+function expand2() {
+    for (var i = 0; i < images2.length; i++)
+        images2[i].classList.toggle('d-none');
+    btn2.classList.toggle('d-none');
+    btn3.classList.toggle('d-none');
+}
 function expand3() {
     for (var i = 0; i < cards.length; i++)
         cards[i].classList.toggle('d-none');
     cardbtn1.classList.toggle('d-none');
     cardbtn2.classList.toggle('d-none');
 }
-// PES membership benefits end
-// Testimonial
-$(document).ready(function () {
-    $("#testimonial-slider").owlCarousel({
-        items: 2,
-        itemsDesktop: [1000, 2],
-        itemsDesktopSmall: [979, 2],
-        itemsTablet: [768, 1],
-        pagination: true,
-        navigation: true,
-        navigationText: ["", ""],
-        autoPlay: true
-    });
+// Navbar collapsing on outside touch
+$(document).click(function (e) {
+    if (!$(e.target).is('#navbar')) {
+        $('.collapse').collapse('hide');
+    }
 });
-// $(window).scroll(function() {
-//     var hT = $('#counter').offset().top,
-//         hH = $('#counter').outerHeight(),
-//         wH = $(window).height(),
-//         wS = $(this).scrollTop();
-//      console.log((hT-wH) , wS);
-//     if (wS > (hT+hH-wH)){
-//      $('#opener').css('background-image','url(../../images/svgs/ham1.svg)');
-//     }
-//     if (wS < (hT+hH-wH)){
-//      $('#opener').css('background-image','url(../../images/svgs/ham.svg)');
-//     }
-//  });

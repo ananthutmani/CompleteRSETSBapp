@@ -8,6 +8,14 @@ middlewareObj.checkPESadmin = function (req, res, next) {
     }
     res.redirect("/pes");
 }
+middlewareObj.checkSBadmin = function (req, res, next) {
+    if (req.isAuthenticated()) {
+        if (req.user.isSBAdmin) {
+            return next();
+        }
+    }
+    res.redirect("/pes");
+}
 middlewareObj.checkBlogadmin = function (req, res, next) {
     if (req.isAuthenticated()) {
         if (req.user.isBlogAdmin) {
