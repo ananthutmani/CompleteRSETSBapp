@@ -21,8 +21,7 @@ var PESRoutes = require("./routes/PESroutes/index"),
     BlogRoutes = require("./routes/Blogroutes/blogs"),
     BlogIndexRoutes = require("./routes/Blogroutes/index");
 
-// var url = process.env.DATABASEURL || "mongodb://localhost/pes_app";
-var url = "mongodb://localhost/pes_app";
+var url = process.env.DATABASEURL || "mongodb://localhost/pes_app";
 
 mongoose.connect(url, {
     useNewUrlParser: true,
