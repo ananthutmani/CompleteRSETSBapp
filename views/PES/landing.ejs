@@ -192,7 +192,8 @@
                                 <div class="row whitecircle justify-content-center align-items-center">
                                     <div class="row orangecircle justify-content-center align-items-center">
                                         <div class="execomimage">
-                                            <img src="https://i.imgur.com/asXKFld.jpg" class="img-fluid" alt="George Thomas">
+                                            <img src="https://i.imgur.com/asXKFld.jpg" class="img-fluid"
+                                                alt="George Thomas">
                                         </div>
                                     </div>
                                 </div>
@@ -214,7 +215,8 @@
                                 <div class="row whitecircle justify-content-center align-items-center">
                                     <div class="row orangecircle justify-content-center align-items-center">
                                         <div class="execomimage">
-                                            <img src="https://i.imgur.com/wPzIFev.jpg" class="img-fluid" alt="Eldho Babu">
+                                            <img src="https://i.imgur.com/wPzIFev.jpg" class="img-fluid"
+                                                alt="Eldho Babu">
                                         </div>
                                     </div>
                                 </div>
@@ -236,7 +238,8 @@
                                 <div class="row whitecircle justify-content-center align-items-center">
                                     <div class="row orangecircle justify-content-center align-items-center">
                                         <div class="execomimage">
-                                            <img src="https://i.imgur.com/CYIGxRL.jpg" class="img-fluid" alt="Ananthu T Mani">
+                                            <img src="https://i.imgur.com/CYIGxRL.jpg" class="img-fluid"
+                                                alt="Ananthu T Mani">
                                         </div>
                                     </div>
                                 </div>
@@ -258,7 +261,8 @@
                                 <div class="row whitecircle justify-content-center align-items-center">
                                     <div class="row orangecircle justify-content-center align-items-center">
                                         <div class="execomimage">
-                                            <img src="https://i.imgur.com/C8UM3bM.jpg" class="img-fluid" alt="Sonal Saju">
+                                            <img src="https://i.imgur.com/C8UM3bM.jpg" class="img-fluid"
+                                                alt="Sonal Saju">
                                         </div>
                                     </div>
                                 </div>
@@ -381,11 +385,11 @@
                                 <img src="<%= event.image %> " alt="Please Refresh Page" class="img-fluid">
                             </div>
                             <div class="col-12 col-md-6 my-3">
-                                <h2 class="text-center mb-1"><%= event.name %> </h2>
-                                <h4 class="text-center mb-3"><%= event.date %></h4>
-                                <% if(event.time){ %>
-                                <h5 class="text-center mb-3"><%= event.time %></h5>
-                                <% } %>
+                                <h2 class="text-center pt-3"><%= event.name %></h2>
+                                <p class="text-dark text-center lead"><%= event.date %><br><% if(event.time){ %>
+                                    <%= event.time %>
+                                    <% } %></p>
+                                <hr>
                                 <p class="mx-3 mx-md-0">
                                     <%= event.description %>
                                 </p>
@@ -429,8 +433,9 @@
                                 <img src="<%= event.image %> " alt="Please Refresh Page" class="img-fluid">
                             </div>
                             <div class="col-11 m-3">
-                                <h2 class="text-center mb-1"><%= event.name %></h2>
-                                <h4 class="text-center mb-3"><%= event.date %></h4>
+                                <h2 class="text-center pt-3"><%= event.name %></h2>
+                                <p class="text-dark text-center lead"><%= event.date %></p>
+                                <hr>
                                 <p class="mx-3 mx-md-0">
                                     <%= event.description %>
                                 </p>
@@ -549,7 +554,8 @@
                     sector, staying true to our founding mission of being an envoy to a brighter future.
                 </p>
                 <div class="row justify-content-center">
-                    <a href="/pes/pf" class="btn btn-success btn-lg d-none d-lg-flex mt-3">Interested? Check Out our Blog!</a>
+                    <a href="/pes/pf" class="btn btn-success btn-lg d-none d-lg-flex mt-3">Interested? Check Out our
+                        Blog!</a>
                     <a href="/pes/pf" class="btn btn-success d-lg-none mt-3">Interested? Check Out our Blog!</a>
                 </div>
             </div>
