@@ -820,6 +820,9 @@ p{
         width: 100%;
     }
 /* Testimonial */
+.owl-theme .owl-controls .owl-page {
+    display: none;
+}
 .testimonial{ margin: 0 20px 50px; }
 .testimonial .pic{
     display: inline-block;
