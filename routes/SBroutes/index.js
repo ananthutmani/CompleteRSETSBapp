@@ -1,12 +1,6 @@
 var express = require("express"),
-    router = express.Router(),
-    // request = require("request"), 
-    // bodyParser = require("body-parser"), 
-    // methodOverride = require("method-override"), 
-    // mongoose = require("mongoose"), 
+    router = express.Router(), 
     passport = require("passport"),
-    // LocalStrategy = require("passport-local"), 
-    // passportLocalMongoose = require("passport-local-mongoose"), 
     Event = require("../../models/SBmodels/events"),
     SBUser = require("../../models/users"),
     middleware = require("../../middleware");
@@ -66,7 +60,7 @@ router.post("/sbsigninroute", function (req, res) {
     if (req.body.adminCode == truthVar) {
         newSBUser.isSBAdmin = true;
     }
-    PESUser.register(newPESUser, req.body.password, function (err, user) {
+    SBUser.register(newSBUser, req.body.password, function (err, user) {
         if (err) {
             console.log(err);
             return res.render("SB/register");
@@ -85,7 +79,7 @@ router.post("/sblogin", passport.authenticate("local", {
 // Logout Route
 router.get("/sblogout", function (req, res) {
     req.logout();
-    res.redirect("/sb");
+    res.redirect("/");
 });
 
 // EDIT EVENT ROUTE

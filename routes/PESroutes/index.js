@@ -1,12 +1,6 @@
 var express = require("express"),
     router = express.Router(),
-    // request = require("request"),
-    // bodyParser = require("body-parser"),
-    // methodOverride = require("method-override"),
-    // mongoose = require("mongoose"),
     passport = require("passport"),
-    // LocalStrategy = require("passport-local"),
-    // passportLocalMongoose = require("passport-local-mongoose"),
     Event = require("../../models/PESmodels/events"),
     PESUser = require("../../models/users"),
     middleware = require("../../middleware");
@@ -61,8 +55,8 @@ router.get("/peslogin", function (req, res) {
 // Handle Signup Logic
 router.post("/pessigninroute", function (req, res) {
     var newPESUser = new PESUser({ username: req.body.username });
-    // var truthVar = process.env.ADMIN;
-    var truthVar = "rset";
+    var truthVar = process.env.PESADMIN;
+    // var truthVar = "rset";
     if (req.body.adminCode == truthVar) {
         newPESUser.isPESAdmin = true;
     }

@@ -5,42 +5,42 @@
         <form action="/pes/pf/blogs" method="POST">
             <div class="form-group">
                 <label for="title">Blog Title</label>
-                <input id="title" class="form-control" type="text" name="name">
+                <input required id="title" class="form-control" type="text" name="name">
             </div>
             <div class="form-group">
                 <label for="blimg">Blog Image</label>
-                <input id="blimg" class="form-control" type="text" name="image" placeholder="Direct Image URL from imgur">
+                <input required id="blimg" class="form-control" type="text" name="image" placeholder="Direct Image URL from imgur">
             </div>
             <div class="form-group">
                 <label for="bldesc">Blog description</label>
-                <textarea name="description" id="bldesc" class="form-control" cols="30"
-                    rows="4"></textarea>
+                <textarea required name="description" id="bldesc" class="form-control" cols="30"
+                    rows="4" placeholder="(Wherever new paragraph should start, write <br>)"></textarea>
             </div>
             <div class="form-group">
                 <label for="auname">Author Name</label>
-                <input id="auname" class="form-control" type="text" name="authorName">
+                <input required id="auname" class="form-control" type="text" name="authorName">
             </div>
             <div class="form-group">
               <label for="auimg">Author Image</label>
-                <input id="auimg" class="form-control" type="text" name="authorImage" placeholder="Direct Image URL from imgur">
+                <input required id="auimg" class="form-control" type="text" name="authorImage" placeholder="Direct Image URL from imgur">
             </div>
             <div class="form-group">
                 <label for="aucol">Author College</label>
-                <input id="aucol" class="form-control" type="text" name="authorCollege">
+                <input required id="aucol" class="form-control" type="text" name="authorCollege">
             </div>
             <div class="form-group">
                 <label for="aubi">Author Bio</label>
-                <textarea class="form-control" name="authorBio" id="aubi" cols="30" rows="4"
+                <textarea required class="form-control" name="authorBio" id="aubi" cols="30" rows="4"
                    ></textarea> </div>
             <div class="form-group">
                 <div class="form-check">
-                    <input name="isExclusive" class="form-check-input" type="radio" id="gridCheck" value="true">
+                    <input required name="isExclusive" class="form-check-input required" type="radio" id="gridCheck" value="true">
                     <label class="form-check-label" for="gridCheck">
                         Exclusive
                     </label>
                 </div>
                 <div class="form-check">
-                    <input name="isExclusive" class="form-check-input" type="radio" id="gridCheck" value="false">
+                    <input required name="isExclusive" class="form-check-input required" type="radio" id="gridCheck" value="false">
                     <label class="form-check-label" for="gridCheck">
                         Community
                     </label>

@@ -2,7 +2,7 @@ html,body {
 	margin:0;
     padding:0;
     width: 100vw;
-    background-image: url(../Images/bg1.svg);
+    background-image: url(../images/svgs/bg1.svg);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;

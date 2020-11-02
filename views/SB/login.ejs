@@ -1,0 +1,55 @@
+<%- include ("../partials/sbheader") %>
+<section id="navigation_bar">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" id="navbr" style="background-color: #0072A6;">
+        <a class="navbar-brand" href="/">
+            <img src="images/logos/type.png" class="img-fluid" alt="IEEE SB RSET">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">LOGIN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sbsigninroute">SIGN UP</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</section>
+<section class="container" style="min-height: 75vh; margin-top: 15vh;">
+    <div>
+        <h1 class="text-center">Administrator Login</h1>
+        <div class="row justify-content-center my-2">
+            <div class="col-11 col-md-8 col-lg-7">
+                <hr>
+            </div>
+        </div>
+        <div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-5">
+                    <form action="/sblogin" method="post">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" class="form-control" id="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" class="form-control" id="password">
+                        </div>
+                        <div class="row justify-content-center mt-4">
+                            <button type="submit" class="btn btn-outline-info" style="min-width: 60%;">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<%- include ("../partials/sbfooter") %>

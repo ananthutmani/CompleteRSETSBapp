@@ -21,13 +21,13 @@ html, body{
     height: 100vh;
 }
 .carouselimage.one{
-    background-image: url("../images/hero-area/01.png");
+    background-image: url("https://i.imgur.com/spuJZw9.jpg");
 }
 .carouselimage.two{
-    background-image: url("../images/hero-area/02.png");
+    background-image: url("https://i.imgur.com/0udM8ad.jpg");
 }
 .carouselimage.three{
-    background-image: url("../images/hero-area/03.png");
+    background-image: url("https://i.imgur.com/Dxa7zmB.jpg");
 }
 .navbar img{
     margin-top: 6px;
@@ -211,7 +211,7 @@ html, body{
 .stretcher{
     padding-top: 10vh;
     padding-bottom: 10vh;
-    background-image: url("../images/misc/volunteer.jpg");
+    background-image: url("https://i.imgur.com/zlfWQSK.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;

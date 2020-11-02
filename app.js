@@ -1,19 +1,13 @@
 var express = require("express"),
     app = express(),
-    // request = require("request"),
     bodyParser = require("body-parser"),
     methodOverride = require("method-override"),
     mongoose = require("mongoose"),
     passport = require("passport"),
     LocalStrategy = require("passport-local"),
-    // passportLocalMongoose = require("passport-local-mongoose"),
     flash = require("connect-flash"),
-    // Event = require("./models/PESmodels/events"),
-    // SBEvent = require("./models/SBmodels/events"),
     User = require("./models/users");
-    // Blog = require("./models/Blogmodels/blogs"),
-    // Comment = require("./models/Blogmodels/comment"),
-    // middleware = require("./middleware");
+
 
 var PESRoutes = require("./routes/PESroutes/index"),
     SBRoutes = require("./routes/SBroutes/index"),
@@ -66,3 +60,4 @@ var port = process.env.PORT || 3000;
 app.listen(port, function () {
     console.log("Server is listening at port 3000");
 })
+// Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita velit molestiae iusto earum nam blanditiis totam commodi fugit quo ullam qui corporis tempore officia rerum ex beatae, soluta itaque est voluptatem numquam neque voluptatum consequatur. Natus est quos aliquam? Fuga.

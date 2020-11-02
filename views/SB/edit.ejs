@@ -1,0 +1,84 @@
+<%- include ("../partials/sbheader") %>
+<section id="navigation_bar">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" id="navbr" style="background-color: #0072A6;">
+        <a class="navbar-brand" href="/">
+            <img src="images/logos/type.png" class="img-fluid" alt="IEEE SB RSET">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">EDIT EVENT</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</section>
+<section class="container" style="min-height: 75vh; margin-top: 15vh;">
+    <div>
+        <h1 class="text-center">Edit <%= event.name %> </h1>
+        <div class="row justify-content-center my-2">
+            <div class="col-11 col-md-8 col-lg-7">
+                <hr>
+            </div>
+        </div>
+        <div class="mb-5">
+            <form action="/<%= event._id %>?_method=PUT" method="POST">
+                <div class="form-group">
+                    <label for="name">Event Name</label>
+                    <input name="event[name]" type="text" class="form-control" id="name" value="<%= event.name %>">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="date">Event Date</label>
+                        <input name="event[date]" type="text" class="form-control" id="date" value="<%= event.date %>">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="time">Event Time (Optional)</label>
+                        <input name="event[time]" type="text" value="<%= event.time %>" class="form-control" id="time">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="description">Event Description</label>
+                    <textarea name="event[description]" class="form-control" id="description" cols="30" rows="5"
+                        placeholder="Less than 40 words with no line breaks (Wherever new paragraph should start, write <br>)."><%= event.description %></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="image">Image URL</label>
+                    <input name="event[image]" type="text" class="form-control" id="image" value="<%= event.image %>">
+                </div>
+                <div class="form-group">
+                    <label for="registrationlink">Registration Link</label>
+                    <input name="event[reglink]" type="text" class="form-control" id="registrationlink"
+                        value="<%= event.reglink %>">
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input name="event[upcoming]" class="form-check-input" type="radio" id="gridCheck" value="true">
+                        <label class="form-check-label" for="gridCheck">
+                            Upcoming Event
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input name="event[upcoming]" class="form-check-input" type="radio" id="gridCheck"
+                            value="false">
+                        <label class="form-check-label" for="gridCheck">
+                            Completed Event
+                        </label>
+                    </div>
+                </div>
+                <div class="row justify-content-center mt-4">
+                    <button type="submit" class="btn btn-outline-info" style="min-width: 60%;">Submit Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<%- include ("../partials/sbfooter") %>
+<!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita velit molestiae iusto earum nam blanditiis totam commodi fugit quo ullam qui corporis tempore officia rerum ex beatae, soluta itaque est voluptatem numquam neque voluptatum consequatur. Natus est quos aliquam? Fuga. -->

@@ -110,19 +110,19 @@
             </ol>
             <div class="carousel-inner" style="overflow-x: hidden;">
                 <div class="carousel-item active">
-                    <img src="/images/bg-slider/1.jpg" class="d-block w-100" alt="Please Refresh Page">
+                    <img src="https://i.imgur.com/AZy81xM.jpg" class="d-block w-100" alt="Please Refresh Page">
                 </div>
                 <div class="carousel-item">
-                    <img src="/images/bg-slider/2.jpg" class="d-block w-100" alt="Please Refresh Page">
+                    <img src="https://i.imgur.com/xXCGM0F.jpg" class="d-block w-100" alt="Please Refresh Page">
                 </div>
                 <div class="carousel-item">
-                    <img src="/images/bg-slider/3.jpg" class="d-block w-100" alt="Please Refresh Page">
+                    <img src="https://i.imgur.com/MQZdBGX.jpg" class="d-block w-100" alt="Please Refresh Page">
                 </div>
                 <div class="carousel-item">
-                    <img src="/images/bg-slider/4.jpg" class="d-block w-100" alt="Please Refresh Page">
+                    <img src="https://i.imgur.com/BFvYSqL.jpg" class="d-block w-100" alt="Please Refresh Page">
                 </div>
                 <div class="carousel-item">
-                    <img src="/images/bg-slider/5.jpg" class="d-block w-100" alt="Please Refresh Page">
+                    <img src="https://i.imgur.com/Ubs58rH.jpg" class="d-block w-100" alt="Please Refresh Page">
                 </div>
             </div>
         </div>
@@ -143,7 +143,7 @@
                     </div>
                 </div>
             </div>
-            <img src="/images/bg-slider/3.jpg" style="height: 100%;" alt="Please Refresh Page">
+            <img src="https://i.imgur.com/MQZdBGX.jpg" style="height: 100%;" alt="Please Refresh Page">
         </div>
         <div id="bottr"></div>
     </section>
@@ -325,22 +325,22 @@
                 <div class="owl-carousel owl-theme text-center">
                     <% for( var i=(blogs.length)-1; i>=0; i--){ %>
                     <% if(!blogs[i].isExclusive){ %>
-                        <div class="card">
-                            <img src="<%= blogs[i].image %>" class="card-img-top" alt="<%= blogs[i].name %>">
-                            <div class="row align-items-end">
-                                <div class="card-body">
-                                    <h5 class="card-title"><%= blogs[i].name %></h5>
-                                    <p class="small">~<em>By <%= blogs[i].authorName %></em></p>
-                                    <p class="card-text"><%= blogs[i].description.substring(0, 50) %> ...</p>
-                                    <a href="/pes/pf/blogs/<%= blogs[i]._id %> " class="btn btn-success">Read More</a>
-                                </div>
+                    <div class="card">
+                        <img src="<%= blogs[i].image %>" class="card-img-top" alt="<%= blogs[i].name %>">
+                        <div class="row align-items-end">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= blogs[i].name %></h5>
+                                <p class="small">~<em>By <%= blogs[i].authorName %></em></p>
+                                <p class="card-text"><%= blogs[i].description.substring(0, 50) %> ...</p>
+                                <a href="/pes/pf/blogs/<%= blogs[i]._id %> " class="btn btn-success">Read More</a>
                             </div>
                         </div>
+                    </div>
                     <% } %>
                     <% } %>
                 </div>
                 <div class="row mt-4 justify-content-center">
-                    <a href="/pes/pf/blogs#community" class="btn btn-lg btn-success col-6" >View All</a>
+                    <a href="/pes/pf/blogs#community" class="btn btn-lg btn-success col-6">View All</a>
                 </div>
         </section>
 

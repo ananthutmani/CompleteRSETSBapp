@@ -26,8 +26,8 @@ router.get("/login", function (req, res) {
 // Handle Signup Logic
 router.post("/register", function (req, res) {
     var newBlogUser = new User({ username: req.body.username });
-    // if (req.body.adminCode == process.env.BLOGCODE) {
-    if (req.body.adminCode == "blogadmin") {
+    if (req.body.adminCode == process.env.BLOGCODE) {
+    // if (req.body.adminCode == "blogadmin") {
         newBlogUser.isBlogAdmin = true;
     }
     User.register(newBlogUser, req.body.password, function (err, user) {
