@@ -55,8 +55,8 @@ router.get("/sblogin", function (req, res) {
 // Handle Signup Logic
 router.post("/sbsigninroute", function (req, res) {
     var newSBUser = new SBUser({ username: req.body.username });
-    // var truthVar = process.env.ADMIN;
-    var truthVar = "rsetsb";
+    var truthVar = process.env.RSETADMIN;
+    // var truthVar = "rsetsb";
     if (req.body.adminCode == truthVar) {
         newSBUser.isSBAdmin = true;
     }
