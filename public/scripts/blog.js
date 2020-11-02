@@ -47,7 +47,7 @@ shell.addEventListener("animationend", function () {
     jQuery(function ($) {
         $('.timer1').countTo({
             from: 0,
-            to: 10,
+            to: 40,
             speed: 800,
             refreshInterval: 25,
             onComplete: function (value) {

@@ -5,7 +5,7 @@ html,body {
 	margin:0;
     padding:0;
     width: 100vw;
-    background-image: url(../../images/svgs/bg1.svg);
+    background-image: url(../images/svgs/bg1.svg);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -245,7 +245,7 @@ section{
     right: 20px;
     width: 10vh;
     height: 10vh;
-    background: url(../../images/svgs/ham.svg);
+    background: url(../images/svgs/ham.svg);
     background-position: center;
     background-repeat: no-repeat;
     z-index: 1;
@@ -258,7 +258,7 @@ section{
     right: 10vh;
     width: 10vh;
     height: 15vh;
-    background: url(../../images/svgs/close.svg);
+    background: url(../images/svgs/close.svg);
     background-position: center;
     background-repeat: no-repeat;
     z-index: 1;
@@ -340,7 +340,7 @@ section{
 }
 
 #mainwrapper{
-    background-image: url(../../images/bg1.svg);
+    background-image: url(../images/svgs/bg1.svg);
     background-attachment: fixed;
     opacity: 1;
 }
@@ -907,7 +907,7 @@ justify-content: start;
 
 @media screen and (max-width: 1000px) {
     #hero{
-        background: url(../../images/Photos/1.jpg);
+        background: url(https://i.imgur.com/88O1xqR.jpg);
         background-size: cover;
         background-attachment: fixed;
         background-position: 50% 50%;
@@ -1053,7 +1053,7 @@ justify-content: start;
             right: 15px;
             width: 5vh;
             height: 5vh;
-            background: url(../../images/svgs/ham.svg);
+            background: url(../images/svgs/ham.svg);
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
@@ -1066,7 +1066,7 @@ justify-content: start;
             right: 0;
             width: 5vh;
             height: 5vh;
-            background: url(../../images/svgs/close.svg);
+            background: url(../images/svgs/close.svg);
             background-position: center;
             background-repeat: no-repeat;
             z-index: 1;
