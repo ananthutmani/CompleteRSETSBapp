@@ -349,7 +349,9 @@ justify-content: start;
 p{
     font-size: 18px;
 }
-
+h2{
+    font-size: 1.5rem;
+}
 .panel h2{
     font-size: 22px;
 }
@@ -364,10 +366,11 @@ p{
     font-size: 16px;
 }
 .cards{
-    /* border: 1px solid #0072A6; */
-    /* border-radius: 30px; */
     color: #0072A6;
     text-align: justify;
+}
+.cards p{
+    color: dimgray;
 }
 .ieeecard{
     border: none;
@@ -404,8 +407,17 @@ h1{
     font-size: 20px;
     min-height: 48px;
 }
-#execom h1, #counter h1{
+h1{
+    font-size: 1.9rem;
+}
+.execom-detailed h2{
+    color: #0072A6;
+}
+#execom h1, .counterh1 h1{
     font-size: 40px;
+}
+.section-header{
+    text-transform: uppercase;
 }
 /* Execom Circles */
 .fixed-top{
@@ -603,7 +615,7 @@ h1{
         font-weight: 400;
         font-size: 15px;
     }
-    #execom h1, #counter h1{
+    #execom h1, .counterh1{
         font-size: 27px;
     }
 }
@@ -619,9 +631,6 @@ h1{
     }
     p{
         font-size: 16px;
-    }
-    h1{
-        font-size: 1.7rem;
     }
      h2{
         font-size: 1.5rem;
@@ -644,7 +653,7 @@ h1{
     #credits i{
         font-size: 20px;
     }
-    #execom h1, #counter h1{
+    #execom h1, .counterh1{
         font-size: 27px;
     }
     #hovertitle {

@@ -35,6 +35,11 @@ router.post("/", middleware.checkSBadmin, function (req, res) {
         }
     })
 });
+// Execom Route
+router.get("/execom", function (req, res) {
+    res.render("SB/execom");
+});
+
 // New Route
 router.get("/new", middleware.checkSBadmin, function (req, res) {
     res.render("SB/new");
