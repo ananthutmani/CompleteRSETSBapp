@@ -21,13 +21,21 @@ html, body{
     height: 100vh;
 }
 .carouselimage.one{
-    background-image: url("https://i.imgur.com/spuJZw9.jpg");
+    background-image: url("https://i.imgur.com/WcF9dxv.jpg");
 }
 .carouselimage.two{
-    background-image: url("https://i.imgur.com/0udM8ad.jpg");
+    background-image: url("https://i.imgur.com/J2XZvqu.jpg");
 }
 .carouselimage.three{
-    background-image: url("https://i.imgur.com/Dxa7zmB.jpg");
+    background-image: url("https://i.imgur.com/JT2bhZ3.jpg");
+}
+.carouselrep{
+    background-image: url("https://i.imgur.com/u8ws7Uu.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 .navbar img{
     margin-top: 6px;
@@ -397,7 +405,6 @@ h1{
 .execomimage:hover{
     box-shadow: 4px 4px 15px dimgray;
 }
-
 .execommembers h4 {
     font-size: 16px;
     font-weight: 400;
