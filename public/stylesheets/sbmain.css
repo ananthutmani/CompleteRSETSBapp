@@ -6,7 +6,7 @@ html, body{
     background-repeat: no-repeat;
     scroll-behavior: smooth;
     color: rgba(0, 0, 0, 0.7);
-
+    font-family: 'Montserrat', sans-serif;
 }
 .maxheight{
  max-height: 100vh;
@@ -400,7 +400,7 @@ h1{
 
 .execommembers h4 {
     font-size: 16px;
-    font-weight: 200;
+    font-weight: 400;
 }
 .execommembers h3 {
     font-weight: 600;
