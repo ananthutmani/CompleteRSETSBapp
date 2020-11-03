@@ -426,6 +426,10 @@ h1{
 .section-header{
     text-transform: uppercase;
 }
+.hash{
+    font-weight: 700; 
+    color: dimgray;
+}
 /* Execom Circles */
 .fixed-top{
     z-index: 998;
