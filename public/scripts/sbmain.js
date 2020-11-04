@@ -138,7 +138,7 @@ $(document).ready(function () {
         autoPlay: true
     });
 });
-// execom
+// Membership cards
 var cards = document.getElementsByClassName('disappear3');
 var cardbtn1 = document.querySelector('.cardbutton1');
 var cardbtn2 = document.querySelector('.cardbutton2');
