@@ -8,6 +8,9 @@ html, body{
     color: rgba(0, 0, 0, 0.7);
     font-family: 'Montserrat', sans-serif;
 }
+body{
+    position: relative;
+}
 .maxheight{
  max-height: 100vh;
  overflow: hidden;
