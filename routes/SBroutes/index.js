@@ -12,7 +12,9 @@ router.get("/", function (req, res) {
             console.log(err);
         }
         else {
-            res.render("SB/landing", { event: allEvents });
+            var SB=["https://i.imgur.com/IWKLWBq.jpg", "https://i.imgur.com/Kp45eys.jpg", "https://i.imgur.com/gCGzsLT.jpg", "https://i.imgur.com/mSU4ve4.jpg", "https://i.imgur.com/lKVjtdr.jpg"];
+            var student=["https://i.imgur.com/aVTpXch.jpg", "https://i.imgur.com/hmEJ5Yt.jpg", "https://i.imgur.com/Im2a95E.jpg", "https://i.imgur.com/duNhTLs.jpg", "https://i.imgur.com/ZjvULvX.jpg", "https://i.imgur.com/51W897L.jpg", "https://i.imgur.com/SJQgeJU.jpg", "https://i.imgur.com/R6zjHUA.jpg", "https://i.imgur.com/re6ecZR.jpg", "https://i.imgur.com/j5U6wvL.jpg", "https://i.imgur.com/EMTcWCW.jpg", "https://i.imgur.com/nScGRQi.jpg", "https://i.imgur.com/JQn9Cl9.jpg", "https://i.imgur.com/ZwXCsLC.jpg", "https://i.imgur.com/3pZyDOb.jpg"];
+            res.render("SB/landing", { event: allEvents, SB: SB, student: student });
         }
     });
 });

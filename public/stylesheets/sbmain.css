@@ -219,6 +219,9 @@ body{
         height: 100%;
         width: 100%;
 }
+.bluish{
+    color: #0072A6;
+}
 .stretcher{
     padding-top: 10vh;
     padding-bottom: 10vh;
