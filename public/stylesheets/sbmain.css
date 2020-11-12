@@ -203,7 +203,7 @@ body{
     font-size: 15px;
     color: white; 
 }
-#credits i{
+#credits i, .linkedin i{
      font-size: 30px;
 }
 #credits p a{
@@ -221,6 +221,18 @@ body{
 }
 .bluish{
     color: #0072A6;
+}
+.linkedin a{
+    width: 100%;
+    background-color: transparent;
+    color: dimgray;
+    border: 1px solid #e5e5e5;
+}
+.linkedin a:hover{
+    background-color: #0072A6;
+    color: white;
+    transition: 0.3s;
+    border-color: #0072A6;
 }
 .stretcher{
     padding-top: 10vh;
@@ -607,7 +619,7 @@ h1{
     #credits p{
         font-size: 12px;
     }
-    #credits i{
+    #credits i, .linkedin i{
         font-size: 23px;
      }
     .execomimage {
@@ -667,7 +679,7 @@ h1{
     #credits p{
         font-size: 10px;
     }    
-    #credits i{
+    #credits i, .linkedin i{
         font-size: 20px;
     }
     #execom h1, .counterh1{
