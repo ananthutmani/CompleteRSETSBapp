@@ -204,7 +204,7 @@ body{
     color: white; 
 }
 #credits i, .linkedin i{
-     font-size: 30px;
+     font-size: 20px;
 }
 #credits p a{
       color: white;
@@ -222,17 +222,18 @@ body{
 .bluish{
     color: #0072A6;
 }
-.linkedin a{
+.linkedin{
     width: 100%;
     background-color: transparent;
     color: dimgray;
     border: 1px solid #e5e5e5;
 }
-.linkedin a:hover{
+.linkedin:hover{
     background-color: #0072A6;
     color: white;
-    transition: 0.3s;
+    transition: 0.5s;
     border-color: #0072A6;
+    text-decoration: none;
 }
 .stretcher{
     padding-top: 10vh;
@@ -302,6 +303,7 @@ body{
     position: relative;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); 
     transition: box-shadow .3s;
+    min-height: 270px;
 }
 .testimonial .description:hover{
     box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.7); 
@@ -320,6 +322,9 @@ body{
     border-width: 18px 18px 0 0;
     left: auto;
     right: 0;
+}
+.testmini{
+    min-height: 110px;
 }
 .owl-theme .owl-controls{
     margin-top: 10px;
@@ -619,6 +624,12 @@ h1{
     #credits p{
         font-size: 12px;
     }
+    .testimonial .description{
+        min-height: 470px;
+        }    
+    .testmini{
+        min-height: 150px;
+    }
     #credits i, .linkedin i{
         font-size: 23px;
      }
@@ -690,5 +701,19 @@ h1{
     }
     #hovertext {
         font-size: 11px;
+    }
+    .testimonial .description{
+        min-height: 230px;
+        }        
+    .testmini{
+        min-height: 130px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .testimonial .description{
+        min-height: 650px;
+        }        
+    .testmini{
+        min-height: 160px;
     }
 }
