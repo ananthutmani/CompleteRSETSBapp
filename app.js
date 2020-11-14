@@ -8,7 +8,7 @@ var express = require("express"),
     flash = require("connect-flash"),
     User = require("./models/users");
 
-
+// hello
 var PESRoutes = require("./routes/PESroutes/index"),
     SBRoutes = require("./routes/SBroutes/index"),
     BlogCommentRoutes = require("./routes/Blogroutes/comments"),
@@ -52,9 +52,9 @@ app.use(function (req, res, next) {
 
 app.use("/", SBRoutes);
 app.use("/pes", PESRoutes);
-app.use("/pes/pf",  BlogIndexRoutes);
+app.use("/pes/pf", BlogIndexRoutes);
 app.use("/pes/pf/blogs", BlogRoutes);
-app.use("/pes/pf/blogs/:id/comments",  BlogCommentRoutes);
+app.use("/pes/pf/blogs/:id/comments", BlogCommentRoutes);
 
 var port = process.env.PORT || 3000;
 app.listen(port, function () {
