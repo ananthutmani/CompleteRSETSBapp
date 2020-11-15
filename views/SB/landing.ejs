@@ -635,7 +635,7 @@
                                 <% }); %>
                             </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-12 mb-4">
                             <h2 class="wow animate__animated animate__fadeInUp"> Recent
                                 Events</h2>
                             <hr>
@@ -648,12 +648,12 @@
                                         <img src="<%= event.image %>" alt="Poster for <%= event.name %>"
                                             class="mt-3 img-fluid" style="max-height: 400px;">
                                     </div>
-                                    <h3 class="text-center pt-3"><%= event.name %></h3>
+                                    <!-- <h3 class="text-center pt-3"><%= event.name %></h3>
                                     <p class="text-dark text-center lead"><%= event.date %></p>
                                     <hr>
                                     <p>
                                         <%= event.description %>
-                                    </p>
+                                    </p> -->
                                     <% if(currentUser && currentUser.isSBAdmin){ %>
                                     <div class="row justify-content-center my-3">
                                         <div class="col-12 row justify-content-center my-3">
