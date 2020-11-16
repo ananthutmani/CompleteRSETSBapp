@@ -54,8 +54,8 @@ app.use("/", SBRoutes);
 app.get("/sitemap.xml", function (req, res) {
     res.sendFile('sitemap.xml', { root: '.' });
 });
-app.get("/google994d31391f28247b.html", function (req, res) {
-    res.render('./google994d31391f28247b.html');
+app.get("/google2ad125264a23c9bc.html", function (req, res) {
+    res.render('./google2ad125264a23c9bc.html');
 });
 app.use("/pes", PESRoutes);
 app.use("/pes/pf", BlogIndexRoutes);
