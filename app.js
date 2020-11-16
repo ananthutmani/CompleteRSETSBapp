@@ -51,6 +51,9 @@ app.use(function (req, res, next) {
 // temporary
 
 app.use("/", SBRoutes);
+app.get("/sitemap.xml", function(req, res){
+    res.sendFile('sitemap.xml', { root: '.' });
+});
 app.use("/pes", PESRoutes);
 app.use("/pes/pf", BlogIndexRoutes);
 app.use("/pes/pf/blogs", BlogRoutes);

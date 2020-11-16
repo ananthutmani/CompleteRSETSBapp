@@ -1,2 +1,2 @@
-# PES_2.0_withBackend
-Complete with registration, login and add, remove or update event capabilities
+# IEEE SB RSET
+Welcome to our humble abode budding developer! We hope to have a wonderful time with you while working on the face of our organzation, the official website of IEEE SB RSET.
