@@ -12,8 +12,28 @@ router.get("/", function (req, res) {
             console.log(err);
         }
         else {
-            var SB=["https://i.imgur.com/IWKLWBq.jpg", "https://i.imgur.com/Kp45eys.jpg", "https://i.imgur.com/gCGzsLT.jpg", "https://i.imgur.com/mSU4ve4.jpg", "https://i.imgur.com/lKVjtdr.jpg"];
-            var student=["https://i.imgur.com/aVTpXch.jpg", "https://i.imgur.com/hmEJ5Yt.jpg", "https://i.imgur.com/Im2a95E.jpg", "https://i.imgur.com/duNhTLs.jpg", "https://i.imgur.com/ZjvULvX.jpg", "https://i.imgur.com/51W897L.jpg", "https://i.imgur.com/SJQgeJU.jpg", "https://i.imgur.com/R6zjHUA.jpg", "https://i.imgur.com/re6ecZR.jpg", "https://i.imgur.com/j5U6wvL.jpg", "https://i.imgur.com/EMTcWCW.jpg", "https://i.imgur.com/nScGRQi.jpg", "https://i.imgur.com/JQn9Cl9.jpg", "https://i.imgur.com/ZwXCsLC.jpg", "https://i.imgur.com/3pZyDOb.jpg"];
+            var SB=[
+            {link:"https://i.imgur.com/IWKLWBq.jpg", alt:"Best Student Branch: IEEE LINK AURA"}, 
+            {link:"https://i.imgur.com/Kp45eys.jpg", alt:"Large Category Winner: Snag the Insignia"}, 
+            {link:"https://i.imgur.com/gCGzsLT.jpg", alt:"Overall Champion: IEEE PES Kerala CHapter Orion"}, 
+            {link:"https://i.imgur.com/mSU4ve4.jpg", alt:"Champion: Kochi Hub IEEE KHM WAR"}, 
+            {link:"https://i.imgur.com/lKVjtdr.jpg", alt:"Champion: Exuro 2020 TKMCE IEEE KERALA SECTION"}
+        ];
+            var student=[
+                {link:"https://i.imgur.com/hmEJ5Yt.jpg", alt:"Jerin Peter: IAS CMD 2020 Robotics contest winner"},
+                {link:"https://i.imgur.com/aVTpXch.jpg", alt:"Vinay Mathew Varghese: IEEE CS Best Volunteer Award"}, 
+                {link:"https://i.imgur.com/nScGRQi.jpg", alt:"Anu Maria Joykutty: Joint Secretary of IEEE CS Kochi Hub"}, 
+                {link:"https://i.imgur.com/3pZyDOb.jpg", alt:"Eldho Babu: Technical Coordinator, IA/IE/PELS Jt. Chapter Kochi Hub"},
+                {link:"https://i.imgur.com/Im2a95E.jpg", alt:"Nivetha KM: Student Representative of IA/IE/PELS Jt. Chapter, Kochi Hub"}, {link:"https://i.imgur.com/duNhTLs.jpg", alt:"Rohit Joseph Mathew: CSIS Design team member 2020"}, 
+                {link:"https://i.imgur.com/SJQgeJU.jpg", alt:"Ann Rose Cherian: Kochi Hub Coordinator of IEEE CS Student Volunteer Team 2020"}, {link:"https://i.imgur.com/R6zjHUA.jpg", alt:"Sonal Saju: Women in Power Representative of PES"}, 
+                {link:"https://i.imgur.com/EMTcWCW.jpg", alt:"Thomaskutty K Jimmy: Student Ambassador, CSIS '20"}, 
+                {link:"https://i.imgur.com/ZjvULvX.jpg", alt:"Eldho Babu: Ambassador, IEEE PES YP Kerala"}, 
+                {link:"https://i.imgur.com/re6ecZR.jpg", alt:"Rohit Joseph Mathew: IEEE Xtreme 14.0 Student Ambassador"}, 
+                {link:"https://i.imgur.com/JQn9Cl9.jpg", alt:"Arjun Sunil Kumar: Student Ambassador, IEEE XTREME 14.0"}, 
+                {link:"https://i.imgur.com/ZwXCsLC.jpg", alt:"Thomaskutty K Jimmy: Student Ambassador, Hack 4 Humanity"}, 
+                {link:"https://i.imgur.com/j5U6wvL.jpg", alt:"Eldho Babu: PES Day 2020 Student Ambassador"}, 
+                {link:"https://i.imgur.com/51W897L.jpg", alt:"Rohit Joseph Mathew: PES Day 2020 Student Ambassador"}
+            ]; 
             res.render("SB/landing", { event: allEvents, SB: SB, student: student });
         }
     });

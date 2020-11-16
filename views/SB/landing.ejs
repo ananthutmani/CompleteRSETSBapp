@@ -434,7 +434,7 @@
                     <div class="owl-carousel text-center mt-2">
                         <% SB.forEach(function(sb){ %>
                         <div class="achievement-block mx-1">
-                            <img src="<%= sb %>" alt="RSET IEEE Student Branch Achievement" class="img-fluid">
+                            <img src="<%= sb.link %>" alt="<%= sb.alt %>" class="img-fluid">
                         </div>
                         <% }); %>
                     </div>
@@ -446,7 +446,7 @@
                     <div class="owl-carousel text-center mt-2">
                         <% student.forEach(function(student){ %>
                         <div class="achievement-block mx-1">
-                            <img src="<%= student %>" alt="RSET IEEE Student Member Achievement" class="img-fluid">
+                            <img src="<%= student.link %>" alt="<%= student.alt %>" class="img-fluid">
                         </div>
                         <% }); %>
                     </div>
@@ -475,7 +475,8 @@
                     <div class="slideshow-container my-5 ">
                         <div class="mySlides fade">
                             <div class="imagebox">
-                                <img src="https://i.imgur.com/KpCPGEn.png" class="image" style="width:100%">
+                                <img src="https://i.imgur.com/KpCPGEn.png" class="image" style="width:100%"
+                                    alt="Talkloop">
                                 <div class="middle">
                                     <div class="text">
                                         <h3 id="hovertitle">TalkLoop</h3>
@@ -490,7 +491,8 @@
                         </div>
                         <div class="mySlides fade">
                             <div class="imagebox">
-                                <img src="https://i.imgur.com/AcfFEMN.jpg" class="image" style="width:100%">
+                                <img src="https://i.imgur.com/AcfFEMN.jpg" class="image" style="width:100%"
+                                    alt="KMRL Visit">
                                 <div class="middle">
                                     <div class="text">
                                         <h3 id="hovertitle">Visit to KMRL</h3>
@@ -507,7 +509,8 @@
                         </div>
                         <div class="mySlides fade">
                             <div class="imagebox">
-                                <img src="https://i.imgur.com/zBCCg1y.jpg" class="image" style="width:100%">
+                                <img src="https://i.imgur.com/zBCCg1y.jpg" class="image" style="width:100%"
+                                    alt="TechRev 2020">
                                 <div class="middle">
                                     <div class="text">
                                         <h3 id="hovertitle">TechRev 2020</h3>
@@ -523,7 +526,8 @@
                         </div>
                         <div class="mySlides fade">
                             <div class="imagebox">
-                                <img src="https://i.imgur.com/ipJSqQi.jpg" class="image" style="width:100%">
+                                <img src="https://i.imgur.com/ipJSqQi.jpg" class="image" style="width:100%"
+                                    alt="EV PES Session">
                                 <div class="middle">
                                     <div class="text">
                                         <h3 id="hovertitle">Interactive Session on EV's</h3>
@@ -540,7 +544,8 @@
                         </div>
                         <div class="mySlides fade">
                             <div class="imagebox">
-                                <img src="https://i.imgur.com/6c0zcjF.jpg" class="image" style="width:100%">
+                                <img src="https://i.imgur.com/6c0zcjF.jpg" class="image" style="width:100%"
+                                    alt="Prativandh">
                                 <div class="middle">
                                     <div class="text">
                                         <h3 id="hovertitle">Prathivaadh</h3>
@@ -554,7 +559,8 @@
                         </div>
                         <div class="mySlides fade">
                             <div class="imagebox">
-                                <img src="https://i.imgur.com/55wWuz7.jpg" class="image" style="width:100%">
+                                <img src="https://i.imgur.com/55wWuz7.jpg" class="image" style="width:100%"
+                                    alt="IEEE Xtreme Mock Session">
                                 <div class="middle">
                                     <div class="text">
                                         <h3 id="hovertitle">IEEE Xtreme Mock Session</h3>
