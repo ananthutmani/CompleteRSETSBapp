@@ -51,8 +51,17 @@ app.use(function (req, res, next) {
 // temporary
 
 app.use("/", SBRoutes);
-app.get("/sitemap.xml", function (req, res) {
-    res.sendFile('sitemap.xml', { root: '.' });
+app.get("/sitemap_1.xml", function (req, res) {
+    res.sendFile('sitemap_1.xml', { root: '.' });
+});
+app.get("/sitemap_2.xml", function (req, res) {
+    res.sendFile('sitemap_2.xml', { root: '.' });
+});
+app.get("/sitemap_3.xml", function (req, res) {
+    res.sendFile('sitemap_3.xml', { root: '.' });
+});
+app.get("/sitemap_4.xml", function (req, res) {
+    res.sendFile('sitemap_4.xml', { root: '.' });
 });
 app.get("/google2ad125264a23c9bc.html", function (req, res) {
     res.render('./google2ad125264a23c9bc.html');
