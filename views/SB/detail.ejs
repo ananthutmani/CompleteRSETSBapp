@@ -57,8 +57,9 @@
                         Events</h2>
                     <hr>
                     <div class="row justify-content-around">
+                        <% var i=0; %>
                         <% event.forEach(function(event){ %>
-                        <% if(event.upcoming) { var i=0; i++;%>
+                        <% if(event.upcoming) { i++; %>
                         <div
                             class="col-10 col-md-6 col-lg-4 px-4 my-3 eventcards wow animate__animated animate__fadeIn">
                             <div class="row justify-content-center">
@@ -88,12 +89,13 @@
                                 <% } %>
                             </div>
                         </div>
-                        <% if(i==0){ %>
-                        <p class="text-center text-muted lead"> We're baking up some amazing events for you soon! Stay
-                            tuned!</p>
-                        <% } %>
                         <% } %>
                         <% }); %>
+                        <% if(i==0){ %>
+                        <p class="text-center text-muted lead my-5"> We're baking up some amazing events for you soon!
+                            Stay
+                            tuned!</p>
+                        <% } %>
                     </div>
                 </div>
                 <div class="col-12 mb-4">
