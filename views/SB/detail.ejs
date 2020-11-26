@@ -30,115 +30,118 @@
         </div>
     </nav>
 </section>
-<section class="container" style="min-height: 75vh; margin-top: 15vh;">
-    <section id="events" class="px-0 mt-5">
-        <div class="row">
-            <div class="mx-2 mx-md-0">
-                <div>
-                    <h1 class="section-header wow animate__animated animate__fadeInUp">
-                        Events
-                    </h1>
-                    <hr>
-                </div>
-                <div class="text-justify wow animate__animated animate__fadeIn" data-wow-delay="500ms">
-                    <p>
-                        The IEEE SB of RSET conducts a lot of innovative technically oriented events which help
-                        student members to shape
-                        their engineering career. As the pioneers of a brighter future, we realize that such
-                        events
-                        play a major role in shaping a future
-                        brimming with capable engineers.
-                    </p>
-                </div>
-            </div>
-            <div class="row my-3 eventcardholder">
-                <div class="col-12">
-                    <h2 class="wow animate__animated animate__fadeInUp"> Upcoming
-                        Events</h2>
-                    <hr>
-                    <div class="row justify-content-around">
-                        <% var i=0; %>
-                        <% event.forEach(function(event){ %>
-                        <% if(event.upcoming) { i++; %>
-                        <div
-                            class="col-10 col-md-6 col-lg-4 px-4 my-3 eventcards wow animate__animated animate__fadeIn">
-                            <div class="row justify-content-center">
-                                <img src="<%= event.image %>" alt="Poster for <%= event.name %>" class="mt-3 img-fluid"
-                                    style="max-height: 400px;">
-                            </div>
-                            <h3 class="text-center pt-3"><%= event.name %></h3>
-                            <p class="text-dark text-center lead"><%= event.date %><br><% if(event.time){ %>
-                                <%= event.time %>
-                                <% } %></p>
-                            <hr>
-                            <p>
-                                <%= event.description %>
-                            </p>
-                            <div class="row justify-content-center my-3">
-                                <% if(event.reglink){ %>
-                                <a href="<%= event.reglink %>" target="_blank" class="btn btn-outline-info">Register
-                                    Now</a>
-                                <% } %>
-                                <% if(currentUser && currentUser.isSBAdmin){ %>
-                                <div class="col-12 row justify-content-center my-3">
-                                    <a href="/<%= event._id %>/edit" class="btn btn-warning mr-4">Edit</a>
-                                    <form action="/<%= event._id %>?_method=DELETE" method="POST">
-                                        <button class="btn btn-danger">Delete</button>
-                                    </form>
-                                </div>
-                                <% } %>
-                            </div>
-                        </div>
-                        <% } %>
-                        <% }); %>
-                        <% if(i==0){ %>
-                        <p class="text-center text-muted lead my-5"> We're baking up some amazing events for you soon!
-                            Stay
-                            tuned!</p>
-                        <% } %>
+<div class="mx-2 mx-md-0">
+    <section class="container" style="min-height: 75vh; margin-top: 15vh;">
+        <section id="events" class="px-0 mt-5">
+            <div class="row">
+                <div class="mx-2 mx-md-0">
+                    <div>
+                        <h1 class="section-header wow animate__animated animate__fadeInUp">
+                            Events
+                        </h1>
+                        <hr>
+                    </div>
+                    <div class="text-justify wow animate__animated animate__fadeIn" data-wow-delay="500ms">
+                        <p>
+                            The IEEE SB of RSET conducts a lot of innovative technically oriented events which help
+                            student members to shape
+                            their engineering career. As the pioneers of a brighter future, we realize that such
+                            events
+                            play a major role in shaping a future
+                            brimming with capable engineers.
+                        </p>
                     </div>
                 </div>
-                <div class="col-12 mb-4">
-                    <h2 class="wow animate__animated animate__fadeInUp"> Recent
-                        Events</h2>
-                    <hr>
-                    <div class="row justify-content-around">
-                        <% event.forEach(function(event){ %>
-                        <% if(!(event.upcoming)) {%>
-                        <div
-                            class="col-10 col-md-6 col-lg-4 px-4 my-3 eventcards wow animate__animated animate__fadeIn">
-                            <div class="row justify-content-center">
-                                <img src="<%= event.image %>" alt="Poster for <%= event.name %>" class="mt-3 img-fluid"
-                                    style="max-height: 400px;">
-                            </div>
-                            <h3 class="text-center pt-3"><%= event.name %></h3>
-                            <p class="text-dark text-center lead"><%= event.date %></p>
-                            <hr>
-                            <p>
-                                <%= event.description %>
-                            </p>
-                            <% if(currentUser && currentUser.isSBAdmin){ %>
-                            <div class="row justify-content-center my-3">
-                                <div class="col-12 row justify-content-center my-3">
-                                    <a href="/<%= event._id %>/edit" class="btn btn-warning mr-4">Edit</a>
-                                    <form action="/<%= event._id %>?_method=DELETE" method="POST">
-                                        <button class="btn btn-danger">Delete</button>
-                                    </form>
+                <div class="row my-3 eventcardholder">
+                    <div class="col-12">
+                        <h2 class="wow animate__animated animate__fadeInUp"> Upcoming
+                            Events</h2>
+                        <hr>
+                        <div class="row justify-content-around">
+                            <% var i=0; %>
+                            <% event.forEach(function(event){ %>
+                            <% if(event.upcoming) { i++; %>
+                            <div
+                                class="col-10 col-md-6 col-lg-4 px-4 my-3 eventcards wow animate__animated animate__fadeIn">
+                                <div class="row justify-content-center">
+                                    <img src="<%= event.image %>" alt="Poster for <%= event.name %>"
+                                        class="mt-3 img-fluid" style="max-height: 400px;">
+                                </div>
+                                <h3 class="text-center pt-3"><%= event.name %></h3>
+                                <p class="text-dark text-center lead"><%= event.date %><br><% if(event.time){ %>
+                                    <%= event.time %>
+                                    <% } %></p>
+                                <hr>
+                                <p>
+                                    <%= event.description %>
+                                </p>
+                                <div class="row justify-content-center my-3">
+                                    <% if(event.reglink){ %>
+                                    <a href="<%= event.reglink %>" target="_blank" class="btn btn-outline-info">Register
+                                        Now</a>
+                                    <% } %>
+                                    <% if(currentUser && currentUser.isSBAdmin){ %>
+                                    <div class="col-12 row justify-content-center my-3">
+                                        <a href="/<%= event._id %>/edit" class="btn btn-warning mr-4">Edit</a>
+                                        <form action="/<%= event._id %>?_method=DELETE" method="POST">
+                                            <button class="btn btn-danger">Delete</button>
+                                        </form>
+                                    </div>
+                                    <% } %>
                                 </div>
                             </div>
                             <% } %>
+                            <% }); %>
+                            <% if(i==0){ %>
+                            <p class="text-center text-muted lead my-5"> We're baking up some amazing events for you
+                                soon!
+                                Stay
+                                tuned!</p>
+                            <% } %>
                         </div>
-                        <% } %>
-                        <% }); %>
-                        <% if(currentUser && currentUser.isSBAdmin){ %>
-                        <div class="container mt-1 mb-5">
-                            <a href="/new" class="btn btn-outline-info w-100">+ Add New Event</a>
+                    </div>
+                    <div class="col-12 mb-4">
+                        <h2 class="wow animate__animated animate__fadeInUp"> Recent
+                            Events</h2>
+                        <hr>
+                        <div class="row justify-content-around">
+                            <% event.forEach(function(event){ %>
+                            <% if(!(event.upcoming)) {%>
+                            <div
+                                class="col-10 col-md-6 col-lg-4 px-4 my-3 eventcards wow animate__animated animate__fadeIn">
+                                <div class="row justify-content-center">
+                                    <img src="<%= event.image %>" alt="Poster for <%= event.name %>"
+                                        class="mt-3 img-fluid" style="max-height: 400px;">
+                                </div>
+                                <h3 class="text-center pt-3"><%= event.name %></h3>
+                                <p class="text-dark text-center lead"><%= event.date %></p>
+                                <hr>
+                                <p>
+                                    <%= event.description %>
+                                </p>
+                                <% if(currentUser && currentUser.isSBAdmin){ %>
+                                <div class="row justify-content-center my-3">
+                                    <div class="col-12 row justify-content-center my-3">
+                                        <a href="/<%= event._id %>/edit" class="btn btn-warning mr-4">Edit</a>
+                                        <form action="/<%= event._id %>?_method=DELETE" method="POST">
+                                            <button class="btn btn-danger">Delete</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <% } %>
+                            </div>
+                            <% } %>
+                            <% }); %>
+                            <% if(currentUser && currentUser.isSBAdmin){ %>
+                            <div class="container mt-1 mb-5">
+                                <a href="/new" class="btn btn-outline-info w-100">+ Add New Event</a>
+                            </div>
+                            <% } %>
                         </div>
-                        <% } %>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </section>
-</section>
+</div>
 <%- include ("../partials/sbfooter") %>
