@@ -66,13 +66,24 @@ app.get("/sitemap_4.xml", function (req, res) {
 app.get("/google2ad125264a23c9bc.html", function (req, res) {
     res.render('./google2ad125264a23c9bc.html');
 });
+app.get("/spices2022", function (req, res) {
+    res.render('spices');
+});
 app.use("/pes", PESRoutes);
 app.use("/pes/pf", BlogIndexRoutes);
 app.use("/pes/pf/blogs", BlogRoutes);
 app.use("/pes/pf/blogs/:id/comments", BlogCommentRoutes);
+app.get("/:id", function (req, res) {
+    res.render('wrong');
+});
+app.get("/:id/:id", function (req, res) {
+    res.render('wrong');
+});
+app.get("/:id/:id/:id", function (req, res) {
+    res.render('wrong');
+});
 
 var port = process.env.PORT || 3000;
 app.listen(port, function () {
     console.log("Server is listening at port 3000");
 })
-// Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita velit molestiae iusto earum nam blanditiis totam commodi fugit quo ullam qui corporis tempore officia rerum ex beatae, soluta itaque est voluptatem numquam neque voluptatum consequatur. Natus est quos aliquam? Fuga. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita velit molestiae iusto earum nam blanditiis totam commodi fugit quo ullam qui corporis tempore officia rerum ex beatae, soluta itaque est voluptatem numquam neque voluptatum consequatur. Natus est quos aliquam? Fuga.

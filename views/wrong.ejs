@@ -1,0 +1,37 @@
+<%- include ("./partials/sbheader") %>
+<section id="navigation_bar">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" id="navbr" style="background-color: #0072A6;">
+        <a class="navbar-brand" href="/">
+            <img src="images/logos/type.png" class="img-fluid" alt="IEEE SB RSET">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</section>
+<div class="container" style="min-height: 75vh; margin-top: 15vh;">
+    <div class="row justify-content-center">
+        <div class="jumbotron bg-transparent">
+            <h1 class="display-4">Oops! Looks like you're lost!</h1>
+            <hr class="my-4">
+            <p class="lead">The route you searched for does not exist in our website. One of these might be the link you
+                wanted to go to:</p>
+            <div class="container">
+                <div class="row justify-content-around mt-5">
+                    <a href="/" class="btn btn-outline-info">IEEE SB RSET</a>
+                    <a href="/pes" class="btn btn-outline-success">IEEE PES RSET</a>
+                    <a href="/pes/pf" class="btn btn-outline-warning">Power Factor</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include ("./partials/sbfooter") %>
