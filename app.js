@@ -8,8 +8,7 @@ var express = require("express"),
     flash = require("connect-flash"),
     User = require("./models/users");
 
-import sslRedirect from 'heroku-ssl-redirect';
-
+// hello
 var PESRoutes = require("./routes/PESroutes/index"),
     SBRoutes = require("./routes/SBroutes/index"),
     BlogCommentRoutes = require("./routes/Blogroutes/comments"),
@@ -49,7 +48,7 @@ app.use(function (req, res, next) {
     res.locals.success = req.flash("success");
     next();
 });
-app.use(sslRedirect());
+// temporary
 
 app.use("/", SBRoutes);
 app.get("/sitemap_1.xml", function (req, res) {
