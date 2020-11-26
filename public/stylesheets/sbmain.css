@@ -672,10 +672,10 @@ h1{
     p{
         font-size: 16px;
     }
-     h2{
+    h2{
         font-size: 1.5rem;
     }
-     h3{
+    h3{
         font-size: 1.3rem;
     }
     .eventcardholder p{
@@ -697,10 +697,10 @@ h1{
         font-size: 27px;
     }
     #hovertitle {
-        font-size: 14px;
+        font-size: 12px;
     }
     #hovertext {
-        font-size: 11px;
+        font-size: 10px;
     }
     .testimonial .description{
         min-height: 230px;

@@ -57,6 +57,16 @@ router.post("/", middleware.checkSBadmin, function (req, res) {
         }
     })
 });
+router.get("/events", function (req, res) {
+    Event.find({}, function (err, allEvents) {
+        if (err) {
+            console.log(err);
+        }
+        else {            
+            res.render("SB/detail", { event: allEvents });
+        }
+    });
+});
 // Execom Route
 router.get("/execom", function (req, res) {
     res.render("SB/execom");
