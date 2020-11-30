@@ -391,7 +391,7 @@
                                     <% } %></p>
                                 <hr>
                                 <p class="mx-3 mx-md-0">
-                                    <%= event.description %>
+                                    <%- event.description %>
                                 </p>
                                 <% if(event.reglink){ %>
                                 <div class="row justify-content-center">
@@ -437,7 +437,7 @@
                                 <p class="text-dark text-center lead"><%= event.date %></p>
                                 <hr>
                                 <p class="mx-3 mx-md-0">
-                                    <%= event.description %>
+                                    <%- event.description %>
                                 </p>
                                 <% if(currentUser && currentUser.isPESAdmin){ %>
                                 <div class="row justify-content-center mt-3">
