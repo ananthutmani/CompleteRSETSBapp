@@ -374,11 +374,11 @@
                     <div class="uline"></div>
                 </div>
             </div>
-            <div class="row justify-content-around">
+            <div class="row justify-content-around" id="upcoming_events">
                 <% var i=0; %>
                 <% event.forEach(function(event){ %>
                 <% if(event.upcoming) { i++;%>
-                <div class="col-12 mb-4 ">
+                <div class="col-12 mb-4">
                     <div class="cardarray">
                         <div class="row justify-content-around align-items-center">
                             <div class="col-8 col-md-5 col-lg-4 row justify-content-center m-3">
@@ -422,7 +422,7 @@
             </div>
         </div>
         <div class="container mb-5">
-            <div class="row justify-content-around align-items-center" style="height: 100%;">
+            <div class="row justify-content-around align-items-center" style="height: 100%;" id="recent_events">
                 <h1 class="text-center">Recent Events</h1>
                 <div class="col-12 row justify-content-center py-0 my-0 mb-4 mb-lg-5 mt-2">
                     <div class="uline"></div>
