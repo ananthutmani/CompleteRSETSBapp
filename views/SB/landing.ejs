@@ -625,7 +625,7 @@
                                         <% } %></p>
                                     <hr>
                                     <p>
-                                        <%= event.description %>
+                                        <%- event.description %>
                                     </p>
                                     <div class="row justify-content-center my-3">
                                         <% if(event.reglink){ %>
@@ -672,7 +672,7 @@
                                     <p class="text-dark text-center lead"><%= event.date %></p>
                                     <hr>
                                     <p>
-                                        <%= event.description %>
+                                        <%- event.description %>
                                     </p> -->
                                     <% if(currentUser && currentUser.isSBAdmin){ %>
                                     <div class="row justify-content-center my-3">
