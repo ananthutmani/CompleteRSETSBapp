@@ -375,9 +375,9 @@
                 </div>
             </div>
             <div class="row justify-content-around">
-                <!-- <div class="col-10 col-md-5 col-lg-4"> -->
+                <% var i=0; %>
                 <% event.forEach(function(event){ %>
-                <% if(event.upcoming) {%>
+                <% if(event.upcoming) { i++;%>
                 <div class="col-12 mb-4 ">
                     <div class="cardarray">
                         <div class="row justify-content-around align-items-center">
@@ -413,6 +413,12 @@
                 </div>
                 <% } %>
                 <% }); %>
+                <% if(i==0){ %>
+                <p class="text-center text-muted lead my-5"> We're baking up some amazing events for you
+                    soon!
+                    Stay
+                    tuned!</p>
+                <% } %>
             </div>
         </div>
         <div class="container mb-5">
@@ -423,10 +429,8 @@
                 </div>
             </div>
             <div class="row justify-content-around">
-                <!-- <div class="col-10 col-md-5 col-lg-4"> -->
-                <% var i=0; %>
                 <% event.forEach(function(event){ %>
-                <% if(!(event.upcoming)) { i++;%>
+                <% if(!(event.upcoming)) {%>
                 <div class="col-12 col-md-6 col-lg-4 mb-4">
                     <div class="cardarray">
                         <div class="row justify-content-around align-items-center">
@@ -454,12 +458,6 @@
                 </div>
                 <% } %>
                 <% }); %>
-                <% if(i==0){ %>
-                <p class="text-center text-muted lead my-5"> We're baking up some amazing events for you
-                    soon!
-                    Stay
-                    tuned!</p>
-                <% } %>
             </div>
         </div>
         <% if(currentUser && currentUser.isPESAdmin){ %>
