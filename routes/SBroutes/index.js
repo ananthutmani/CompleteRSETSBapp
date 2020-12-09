@@ -82,31 +82,31 @@ router.get("/new", middleware.checkSBadmin, function (req, res) {
 // ================================
 
 // show Signup
-router.get("/sbsigninroute", function (req, res) {
-    res.render("SB/register", { page: 'register' });
-});
+// router.get("/sbsigninroute", function (req, res) {
+//     res.render("SB/register", { page: 'register' });
+// });
 // loginroute
 router.get("/sblogin", function (req, res) {
     res.render("SB/login", { page: 'login' });
 });
 // Handle Signup Logic
-router.post("/sbsigninroute", function (req, res) {
-    var newSBUser = new SBUser({ username: req.body.username });
-    var truthVar = process.env.RSETADMIN;
-    // var truthVar = "rsetsb";
-    if (req.body.adminCode == truthVar) {
-        newSBUser.isSBAdmin = true;
-    }
-    SBUser.register(newSBUser, req.body.password, function (err, user) {
-        if (err) {
-            console.log(err);
-            return res.render("SB/register");
-        }
-        passport.authenticate("local")(req, res, function () {
-            res.redirect("/");
-        });
-    });
-});
+// router.post("/sbsigninroute", function (req, res) {
+//     var newSBUser = new SBUser({ username: req.body.username });
+//     var truthVar = process.env.RSETADMIN;
+//     // var truthVar = "rsetsb";
+//     if (req.body.adminCode == truthVar) {
+//         newSBUser.isSBAdmin = true;
+//     }
+//     SBUser.register(newSBUser, req.body.password, function (err, user) {
+//         if (err) {
+//             console.log(err);
+//             return res.render("SB/register");
+//         }
+//         passport.authenticate("local")(req, res, function () {
+//             res.redirect("/");
+//         });
+//     });
+// });
 
 router.post("/sblogin", passport.authenticate("local", {
     successRedirect: "/",

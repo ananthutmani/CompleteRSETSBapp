@@ -45,31 +45,31 @@ router.get("/new", middleware.checkPESadmin, function (req, res) {
 // ================================
 
 // show Signup
-router.get("/pessigninroute", function (req, res) {
-    res.render("PES/register", { page: 'register' });
-});
+// router.get("/pessigninroute", function (req, res) {
+//     res.render("PES/register", { page: 'register' });
+// });
 // loginroute
 router.get("/peslogin", function (req, res) {
     res.render("PES/login", { page: 'login' });
 });
 // Handle Signup Logic
-router.post("/pessigninroute", function (req, res) {
-    var newPESUser = new PESUser({ username: req.body.username });
-    var truthVar = process.env.PESADMIN;
-    // var truthVar = "rset";
-    if (req.body.adminCode == truthVar) {
-        newPESUser.isPESAdmin = true;
-    }
-    PESUser.register(newPESUser, req.body.password, function (err, user) {
-        if (err) {
-            console.log(err);
-            return res.render("PES/register");
-        }
-        passport.authenticate("local")(req, res, function () {
-            res.redirect("/pes");
-        });
-    });
-});
+// router.post("/pessigninroute", function (req, res) {
+//     var newPESUser = new PESUser({ username: req.body.username });
+//     var truthVar = process.env.PESADMIN;
+//     // var truthVar = "rset";
+//     if (req.body.adminCode == truthVar) {
+//         newPESUser.isPESAdmin = true;
+//     }
+//     PESUser.register(newPESUser, req.body.password, function (err, user) {
+//         if (err) {
+//             console.log(err);
+//             return res.render("PES/register");
+//         }
+//         passport.authenticate("local")(req, res, function () {
+//             res.redirect("/pes");
+//         });
+//     });
+// });
 
 router.post("/peslogin", passport.authenticate("local", {
     successRedirect: "/pes",

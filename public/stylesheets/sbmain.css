@@ -187,7 +187,7 @@ body{
     color: white;
     background-color: #0072A6;
 }
-#ending h1{
+#ending h2{
     color: white;
     font-weight: 500;
 }
@@ -380,9 +380,6 @@ justify-content: start;
 p{
     font-size: 18px;
 }
-h2{
-    font-size: 1.5rem;
-}
 .panel h2{
     font-size: 22px;
 }
@@ -411,12 +408,25 @@ h2{
     font-weight: 700;
     text-align: center;
 }
+/* Corrector ========================================================= */
 h1{
     color: #0072A6;
+    font-size: 1.9rem;
 }
-.stretcher h1{
+h2{
+    font-size: 1.5rem;
+}
+h2.h1{
+    color: #0072A6;
+}
+.stretcher h2{
     color: white;
 }
+#execom h2, .counterh1 h2{
+    font-size: 40px;
+}
+/* Corrector ========================================================= */
+
 
 /* Execom Circles */
 .execomimage {
@@ -437,15 +447,10 @@ h1{
     font-size: 20px;
     min-height: 48px;
 }
-h1{
-    font-size: 1.9rem;
-}
 .execom-detailed h2{
     color: #0072A6;
 }
-#execom h1, .counterh1 h1{
-    font-size: 40px;
-}
+
 .section-header{
     text-transform: uppercase;
 }
@@ -655,7 +660,7 @@ h1{
         font-weight: 400;
         font-size: 15px;
     }
-    #execom h1, .counterh1{
+    .counterh1{
         font-size: 27px;
     }
 }
@@ -672,6 +677,7 @@ h1{
     p{
         font-size: 16px;
     }
+    /* ======================================================= */
     h2{
         font-size: 1.5rem;
     }
@@ -693,7 +699,7 @@ h1{
     #credits i, .linkedin i{
         font-size: 20px;
     }
-    #execom h1, .counterh1{
+    .counterh1{
         font-size: 27px;
     }
     #hovertitle {

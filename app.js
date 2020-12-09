@@ -7,8 +7,6 @@ var express = require("express"),
     LocalStrategy = require("passport-local"),
     flash = require("connect-flash"),
     User = require("./models/users");
-
-// hello
 var PESRoutes = require("./routes/PESroutes/index"),
     SBRoutes = require("./routes/SBroutes/index"),
     BlogCommentRoutes = require("./routes/Blogroutes/comments"),
@@ -48,7 +46,7 @@ app.use(function (req, res, next) {
     res.locals.success = req.flash("success");
     next();
 });
-// temporary
+
 
 app.use("/", SBRoutes);
 app.get("/sitemap_1.xml", function (req, res) {
@@ -82,7 +80,6 @@ app.get("/:id/:id", function (req, res) {
 app.get("/:id/:id/:id", function (req, res) {
     res.render('wrong');
 });
-
 var port = process.env.PORT || 3000;
 app.listen(port, function () {
     console.log("Server is listening at port 3000");

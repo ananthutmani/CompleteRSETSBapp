@@ -53,7 +53,7 @@ hr{
     transition: 0.3s;
     background-color: rgba(0, 0, 0, 0.3);
 }
-.jumbotron h1{
+.jumbotron h2{
     font-weight: 600;
 }
 .subheader img{
@@ -79,7 +79,6 @@ hr{
     font-weight: 700;
     font-size: 50px;
 }
-
 #counter p{
     display: inline-block;
     height: 20vh;
@@ -92,7 +91,7 @@ hr{
     color: white;
     background-color: rgba(0, 150, 0, 1);
 }
-#ending h1{
+#ending h2{
     color: white;
     font-weight: 500;
 }
@@ -276,10 +275,11 @@ hr{
 }
 
 @media screen and (max-width: 1000px) {
+    
     .mapxx iframe{
         height: 300px;
     }
- #credits p{
+    #credits p{
         font-size: 12px;
     }
     #credits i{
@@ -290,6 +290,7 @@ hr{
     }
 }
 @media screen and (max-width: 800px) {
+    
     .exclusive_set{
         border-radius: 0px;
         overflow: hidden;
@@ -305,11 +306,11 @@ hr{
     #counter p{
         font-size: 19px;
     }
-.mapxx iframe{
+    .mapxx iframe{
         margin-left: 20px;
         height: 250px;
     }    
-#credits p{
+    #credits p{
         font-size: 10px;
     }    
     #credits i{

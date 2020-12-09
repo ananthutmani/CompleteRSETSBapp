@@ -31,9 +31,8 @@ html,body {
 #ending{
     color: white;
 }
-#ending h1{
+#ending h2{
     color: white;
-    font-weight: 500;
 }
 #ending h3{
     font-size: 19px;
@@ -76,7 +75,8 @@ html,body {
     width: 150px;
 }
 @media screen and (max-width: 1000px) {
-    .mapxx iframe{
+    
+        .mapxx iframe{
         height: 300px;
     }
     #credits p{
@@ -89,7 +89,7 @@ html,body {
 }
 @media screen and (max-width: 800px) {
 
-    .mapxx iframe{
+        .mapxx iframe{
         margin-left: 20px;
         height: 250px;
     }    
