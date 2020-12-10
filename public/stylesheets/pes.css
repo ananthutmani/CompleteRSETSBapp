@@ -785,10 +785,6 @@ p{
     color: white;
     background-color: rgba(0, 150, 0, 1);
 }
-#ending h2.h1{
-    color: white;
-    font-weight: 500;
-}
 #ending h3{
     font-size: 19px;
     font-weight: 500;
@@ -910,7 +906,21 @@ justify-content: start;
     min-height: 110px;
 }
 /* Testimonial */
-
+#ending h2.h1{
+    font-weight: 500;
+    font-size: x-large;
+    color: white;
+}
+#ending hr{
+    border-color: rgba(255, 255, 255, 0.3);
+}
+#extras li{
+    list-style-type: square;
+}
+#ending .soc-med i{
+    color: white;
+    font-size: 30px;
+}
 @media screen and (max-width: 1000px) {
     #hero{
         background: url(https://i.imgur.com/88O1xqR.jpg);

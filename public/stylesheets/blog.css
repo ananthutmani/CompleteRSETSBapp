@@ -91,9 +91,31 @@ hr{
     color: white;
     background-color: rgba(0, 150, 0, 1);
 }
-#ending h2{
-    color: white;
+#ending h2.h1{
     font-weight: 500;
+    font-size: x-large;
+    color: white;
+}
+#ending hr{
+    width: 100%;
+    margin-top: 1rem;
+margin-bottom: 1rem;
+border: 0;
+    border-top-color: currentcolor;
+    border-top-style: none;
+    border-top-width: 0px;
+    border-right-color: currentcolor;
+    border-bottom-color: currentcolor;
+    border-left-color: currentcolor;
+border-top: 1px solid rgba(0,0,0,.1);
+    border-top-color: rgba(0, 0, 0, 0.1);
+}
+#ending hr{
+    border-color: rgba(255, 255, 255, 0.3);
+}
+#ending .soc-med i{
+    color: white;
+    font-size: 30px;
 }
 #ending h3{
     font-size: 19px;

@@ -182,14 +182,19 @@ body{
     font-size: 20px;
 }
 /* Image slider CSS end*/
-
+#extras li{
+    list-style-type: square;
+}
 #ending{
     color: white;
     background-color: #0072A6;
 }
+#ending hr{
+    border-color: rgba(255, 255, 255, 0.3);
+}
 #ending h2{
+    font-size: x-large;
     color: white;
-    font-weight: 500;
 }
 #ending h3{
     font-size: 19px;
@@ -198,6 +203,10 @@ body{
 #ending p{
     font-size: 15px;
     font-weight: 400;
+}
+#ending .soc-med i{
+    color: white;
+    font-size: 30px;
 }
 #credits p{
     font-size: 15px;
@@ -619,7 +628,6 @@ h2.h1{
         opacity: 1;
     }
 }
-
 /* Preloader */
 /* trial 1 */
 @media screen and (max-width: 1000px) {
@@ -678,8 +686,8 @@ h2.h1{
         font-size: 16px;
     }
     /* ======================================================= */
-    h2{
-        font-size: 1.5rem;
+    h2.h1,h1 {
+        font-size: 23px;
     }
     h3{
         font-size: 1.3rem;
@@ -716,6 +724,9 @@ h2.h1{
     }
 }
 @media screen and (max-width: 500px) {
+    h2.h1,h1 {
+        font-size: 23px;
+    }
     .testimonial .description{
         min-height: 650px;
         }        
